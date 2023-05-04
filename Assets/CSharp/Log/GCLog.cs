@@ -18,6 +18,7 @@ namespace CSharp.Log
 
         public void Log(string value)
         {
+            // TODO
             Console.WriteLine(value);
         }
         public void Log(object value)
