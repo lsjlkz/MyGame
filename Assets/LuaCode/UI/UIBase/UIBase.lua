@@ -13,7 +13,7 @@ function __UIBaseTable__:show()
     if(self.isShow == true) then
         return
     end
-    self.mainComponent = GEUI.ShowUIPanel(self.panelName, self.pkgName, self.comName)
+    self.mainComponent = GEUI.instance():ShowUIPanel(self.panelName, self.pkgName, self.comName)
     self.isShow = true
 end
 

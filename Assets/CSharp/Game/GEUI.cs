@@ -4,6 +4,7 @@ using XLua;
 
 namespace CSharp.Game
 {
+    [LuaCallCSharp]
     public class GEUI
     {
         public static GEUI _instance = null;
@@ -30,7 +31,7 @@ namespace CSharp.Game
             UIPackage.AddPackage($"UI/{pkgName}");
         }
 
-        public static GObject ShowUIPanel(string panelName, string pkgName, string comName)
+        public GObject ShowUIPanel(string panelName, string pkgName, string comName)
         {
             GObject gObject;
             if (!instance().panelDict.TryGetValue(panelName, out gObject))
@@ -46,7 +47,7 @@ namespace CSharp.Game
             }
             return groot().AddChild(gObject);
         }
-        public static GObject AddUIPanel(string pkgName, string comName)
+        public GObject AddUIPanel(string pkgName, string comName)
         {
             LoadUIPackage(pkgName);
             GObject gObject = UIPackage.CreateObject(pkgName, comName);
@@ -54,7 +55,7 @@ namespace CSharp.Game
             return gObject;
         }
 
-        public static void HideUIPanel(string panelName)
+        public void HideUIPanel(string panelName)
         {
             
             GObject gObject;

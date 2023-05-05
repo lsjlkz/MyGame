@@ -2,9 +2,11 @@
 using System.Net;
 using System.Net.Sockets;
 using CSharp.Log;
+using XLua;
 
 namespace CSharp
 {
+    [LuaCallCSharp]
     public class GESocket
     {
         private Socket socket = null;

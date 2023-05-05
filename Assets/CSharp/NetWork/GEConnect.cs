@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using XLua;
 
 namespace CSharp
 {
+    [LuaCallCSharp]
     public class GEConnect
     {
         private static GEConnect _instance = null;
