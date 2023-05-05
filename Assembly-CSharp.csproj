@@ -13,7 +13,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{33b4487b-cb9f-a1d2-421f-cd76f62bb0be}</ProjectGuid>
+    <ProjectGuid>{6083fa9f-bf0b-a77a-0617-18280ca03e00}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -52,241 +52,242 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\CSharp\NetWork\GEConnect.cs" />
-     <Compile Include="Assets\CSharp\NetWork\GESocket.cs" />
-     <Compile Include="Assets\CSharp\Log\GELog.cs" />
-     <Compile Include="Assets\CSharp\NetWork\GENetCommon.cs" />
-     <Compile Include="Assets\XLua\Examples\05_NoGc\NoGc.cs" />
-     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\ByFile.cs" />
-     <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
-     <Compile Include="Assets\XLua\Examples\08_Hotfix\StatefullTest.cs" />
-     <Compile Include="Assets\XLua\Tutorial\CSharpCallLua\CSCallLua.cs" />
-     <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
-     <Compile Include="Assets\XLua\Examples\07_AsyncTest\MessageBox.cs" />
-     <Compile Include="Assets\XLua\Examples\09_GenericMethod\GenericMethodExample.cs" />
-     <Compile Include="Assets\XLua\Examples\ExampleGenConfig.cs" />
-     <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest.cs" />
-     <Compile Include="Assets\XLua\Examples\09_GenericMethod\Foo.cs" />
-     <Compile Include="Assets\XLua\Examples\06_Coroutine\CoroutineTest.cs" />
-     <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
-     <Compile Include="Assets\XLua\Tutorial\LuaCallCSharp\LuaCallCs.cs" />
-     <Compile Include="Assets\XLua\Examples\12_ReImplementInLua\ReImplementInLua.cs" />
-     <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest2.cs" />
-     <Compile Include="Assets\XLua\Examples\10_SignatureLoader\SignatureLoaderTest.cs" />
-     <Compile Include="Assets\XLua\Examples\11_RawObject\RawObjectTest.cs" />
-     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\Loader\CustomLoader.cs" />
-     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByString\ByString.cs" />
-     <Compile Include="Assets\XLua\Examples\06_Coroutine\Coroutine_Runner.cs" />
-     <Compile Include="Assets\XLua\Examples\07_AsyncTest\AsyncTest.cs" />
-     <Compile Include="Assets\CSharp\Game\GELua.cs" />
-     <Compile Include="Assets\CSharp\Game\InitBehaviour.cs" />
      <Compile Include="Assets\Examples\Bag\MyGLoader.cs" />
-     <Compile Include="Assets\Examples\TurnCard\Card.cs" />
-     <Compile Include="Assets\Examples\Filter\FilterMain.cs" />
      <Compile Include="Assets\Scripts\Utils\Html\HtmlSelect.cs" />
-     <Compile Include="Assets\Scripts\Core\BlendMode.cs" />
      <Compile Include="Assets\Scripts\UI\PopupMenu.cs" />
-     <Compile Include="Assets\Scripts\Core\Mesh\LineMesh.cs" />
-     <Compile Include="Assets\Scripts\UI\ScrollPane.cs" />
-     <Compile Include="Assets\Scripts\Event\InputEvent.cs" />
-     <Compile Include="Assets\Scripts\Tween\GTween.cs" />
-     <Compile Include="Assets\Extensions\Spine\SpineLoader.cs" />
-     <Compile Include="Assets\Scripts\Core\Mesh\EllipseMesh.cs" />
-     <Compile Include="Assets\Scripts\Utils\XMLList.cs" />
-     <Compile Include="Assets\Scripts\Core\Text\RTLSupport.cs" />
-     <Compile Include="Assets\Scripts\UI\Action\PlayTransitionAction.cs" />
-     <Compile Include="Assets\Scripts\UI\GTextField.cs" />
-     <Compile Include="Assets\Scripts\Core\Container.cs" />
-     <Compile Include="Assets\Scripts\Core\ShaderConfig.cs" />
-     <Compile Include="Assets\Examples\TurnPage\FairyBook.cs" />
-     <Compile Include="Assets\Scripts\Core\StageEngine.cs" />
-     <Compile Include="Assets\Scripts\Core\Text\DynamicFont.cs" />
-     <Compile Include="Assets\Examples\Extension\ExtensionMain.cs" />
+     <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
      <Compile Include="Assets\Scripts\Core\Text\TypingEffect.cs" />
-     <Compile Include="Assets\Examples\Bag\BagWindow.cs" />
      <Compile Include="Assets\Scripts\UI\GSlider.cs" />
-     <Compile Include="Assets\Scripts\Utils\XML.cs" />
-     <Compile Include="Assets\Scripts\Filter\ColorFilter.cs" />
-     <Compile Include="Assets\Scripts\UI\GObjectPool.cs" />
-     <Compile Include="Assets\Scripts\UI\Gears\GearText.cs" />
-     <Compile Include="Assets\Examples\ScrollPane\ScrollPaneMain.cs" />
-     <Compile Include="Assets\Scripts\Core\Text\FontManager.cs" />
-     <Compile Include="Assets\Examples\Joystick\JoystickModule.cs" />
-     <Compile Include="Assets\Scripts\Core\HitTest\IHitTest.cs" />
-     <Compile Include="Assets\Examples\Particles\CoolComponent.cs" />
-     <Compile Include="Assets\Examples\TypingEffect\TypingEffectMain.cs" />
-     <Compile Include="Assets\Scripts\Utils\Timers.cs" />
-     <Compile Include="Assets\Examples\EmitNumbers\EmitComponent.cs" />
-     <Compile Include="Assets\Scripts\UI\AsyncCreationHelper.cs" />
      <Compile Include="Assets\Scripts\UI\GProgressBar.cs" />
-     <Compile Include="Assets\Scripts\Core\NGraphics.cs" />
-     <Compile Include="Assets\Scripts\Core\HitTest\HitTestContext.cs" />
-     <Compile Include="Assets\Examples\Basics\Window2.cs" />
-     <Compile Include="Assets\Scripts\Core\MaterialManager.cs" />
-     <Compile Include="Assets\Scripts\Core\HitTest\ShapeHitTest.cs" />
-     <Compile Include="Assets\Scripts\UI\GTreeNode.cs" />
-     <Compile Include="Assets\Scripts\UI\UIPanel.cs" />
      <Compile Include="Assets\Scripts\UI\UIContentScaler.cs" />
-     <Compile Include="Assets\Examples\CutScene\CutSceneMain.cs" />
-     <Compile Include="Assets\Scripts\UI\Tree\TreeNode.cs" />
-     <Compile Include="Assets\Scripts\UI\Tree\TreeView.cs" />
-     <Compile Include="Assets\Scripts\Core\Text\BaseFont.cs" />
-     <Compile Include="Assets\Scripts\UI\RelationItem.cs" />
-     <Compile Include="Assets\Scripts\UI\GObject.cs" />
-     <Compile Include="Assets\Scripts\Core\NAudioClip.cs" />
-     <Compile Include="Assets\Scripts\Core\Text\RichTextField.cs" />
-     <Compile Include="Assets\Scripts\UI\FieldTypes.cs" />
-     <Compile Include="Assets\Scripts\Utils\ZipReader.cs" />
-     <Compile Include="Assets\Scripts\Core\HitTest\ColliderHitTest.cs" />
-     <Compile Include="Assets\Scripts\Core\Mesh\StraightLineMesh.cs" />
-     <Compile Include="Assets\Scripts\UI\GTextInput.cs" />
-     <Compile Include="Assets\Scripts\UI\Margin.cs" />
-     <Compile Include="Assets\Scripts\UI\Relations.cs" />
-     <Compile Include="Assets\Scripts\Core\NTexture.cs" />
-     <Compile Include="Assets\Scripts\Event\EventDispatcher.cs" />
-     <Compile Include="Assets\Scripts\UI\GImage.cs" />
-     <Compile Include="Assets\Scripts\Tween\EaseType.cs" />
-     <Compile Include="Assets\Scripts\UI\Gears\GearColor.cs" />
-     <Compile Include="Assets\Scripts\UI\UIObjectFactory.cs" />
-     <Compile Include="Assets\Examples\TurnPage\TurnPageMain.cs" />
-     <Compile Include="Assets\Examples\Bag\BagMain.cs" />
-     <Compile Include="Assets\Scripts\Core\Image.cs" />
-     <Compile Include="Assets\Scripts\UI\GGroup.cs" />
-     <Compile Include="Assets\Scripts\Event\EventListener.cs" />
-     <Compile Include="Assets\Scripts\Core\HitTest\RectHitTest.cs" />
-     <Compile Include="Assets\Scripts\Core\Mesh\RoundedRectMesh.cs" />
-     <Compile Include="Assets\Scripts\Core\Text\Emoji.cs" />
-     <Compile Include="Assets\Scripts\Core\UpdateContext.cs" />
-     <Compile Include="Assets\Examples\HeadBar\HeadBarMain.cs" />
-     <Compile Include="Assets\Scripts\Utils\Html\HtmlParser.cs" />
-     <Compile Include="Assets\Scripts\Event\IEventDispatcher.cs" />
-     <Compile Include="Assets\Extensions\DragonBones\DragonBonesLoader.cs" />
-     <Compile Include="Assets\Examples\Cooldown\CooldownMain.cs" />
-     <Compile Include="Assets\Scripts\UI\TranslationHelper.cs" />
-     <Compile Include="Assets\Scripts\UI\UIConfig.cs" />
-     <Compile Include="Assets\Examples\Curve\CurveMain.cs" />
-     <Compile Include="Assets\Scripts\UI\UIPackage.cs" />
-     <Compile Include="Assets\Scripts\UI\GLoader3D.cs" />
-     <Compile Include="Assets\Scripts\Gesture\SwipeGesture.cs" />
-     <Compile Include="Assets\Scripts\Core\GoWrapper.cs" />
-     <Compile Include="Assets\Scripts\UI\Gears\IColorGear.cs" />
-     <Compile Include="Assets\Scripts\Core\DisplayObject.cs" />
-     <Compile Include="Assets\Scripts\Utils\UBBParser.cs" />
-     <Compile Include="Assets\Examples\Joystick\JoystickMain.cs" />
-     <Compile Include="Assets\Examples\Emoji\EmojiMain.cs" />
-     <Compile Include="Assets\Examples\Gesture\GestureMain.cs" />
-     <Compile Include="Assets\Scripts\Core\Text\InputTextField.cs" />
-     <Compile Include="Assets\Examples\Basics\BasicsMain.cs" />
-     <Compile Include="Assets\Scripts\UI\GGraph.cs" />
-     <Compile Include="Assets\Scripts\Core\Mesh\FillMesh.cs" />
-     <Compile Include="Assets\Scripts\UI\Gears\GearIcon.cs" />
+     <Compile Include="Assets\Scripts\Core\HitTest\ShapeHitTest.cs" />
+     <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest.cs" />
      <Compile Include="Assets\Scripts\Utils\Html\IHtmlObject.cs" />
      <Compile Include="Assets\Scripts\UI\PackageItem.cs" />
-     <Compile Include="Assets\Scripts\UI\Gears\GearXY.cs" />
-     <Compile Include="Assets\Scripts\Filter\BlurFilter.cs" />
+     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\ByFile.cs" />
+     <Compile Include="Assets\CSharp\Game\InitUI.cs" />
+     <Compile Include="Assets\Scripts\Tween\TweenManager.cs" />
+     <Compile Include="Assets\Examples\Emoji\EmojiParser.cs" />
+     <Compile Include="Assets\Scripts\Utils\Html\IHtmlPageContext.cs" />
+     <Compile Include="Assets\Scripts\Core\CaptureCamera.cs" />
+     <Compile Include="Assets\Examples\TreeView\TreeViewMain.cs" />
+     <Compile Include="Assets\Examples\ModalWaiting\Window4.cs" />
+     <Compile Include="Assets\Scripts\Core\Mesh\CompositeMesh.cs" />
+     <Compile Include="Assets\Scripts\Core\Mesh\PolygonMesh.cs" />
+     <Compile Include="Assets\Scripts\Event\EventContext.cs" />
+     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\Loader\CustomLoader.cs" />
+     <Compile Include="Assets\Examples\EmitNumbers\EmitManager.cs" />
+     <Compile Include="Assets\Scripts\Core\Stats.cs" />
+     <Compile Include="Assets\Scripts\Core\Text\DynamicFont.cs" />
+     <Compile Include="Assets\Scripts\Core\HitTest\HitTestContext.cs" />
+     <Compile Include="Assets\XLua\Examples\09_GenericMethod\Foo.cs" />
+     <Compile Include="Assets\Scripts\Core\NAudioClip.cs" />
+     <Compile Include="Assets\Scripts\Tween\EaseType.cs" />
+     <Compile Include="Assets\XLua\Examples\11_RawObject\RawObjectTest.cs" />
+     <Compile Include="Assets\Scripts\Core\GoWrapper.cs" />
+     <Compile Include="Assets\CSharp\Log\GELog.cs" />
+     <Compile Include="Assets\Examples\Emoji\EmojiMain.cs" />
+     <Compile Include="Assets\Scripts\Core\Text\InputTextField.cs" />
      <Compile Include="Assets\Examples\TurnPage\BookPage.cs" />
-     <Compile Include="Assets\Scripts\UI\Action\ControllerAction.cs" />
-     <Compile Include="Assets\Scripts\Core\StageCamera.cs" />
-     <Compile Include="Assets\Scripts\Core\Text\TouchScreenKeyboard.cs" />
+     <Compile Include="Assets\Scripts\Core\HitTest\MeshColliderHitTest.cs" />
+     <Compile Include="Assets\Examples\PullToRefresh\PullToRefreshMain.cs" />
+     <Compile Include="Assets\Scripts\UI\GTree.cs" />
+     <Compile Include="Assets\Scripts\UI\GLoader.cs" />
+     <Compile Include="Assets\Scripts\Core\Mesh\VertexBuffer.cs" />
+     <Compile Include="Assets\Scripts\Core\Text\SelectionShape.cs" />
+     <Compile Include="Assets\Scripts\Core\Mesh\RectMesh.cs" />
+     <Compile Include="Assets\XLua\Examples\06_Coroutine\CoroutineTest.cs" />
+     <Compile Include="Assets\Scripts\Core\MovieClip.cs" />
+     <Compile Include="Assets\Scripts\Utils\Html\HtmlElement.cs" />
+     <Compile Include="Assets\XLua\Examples\12_ReImplementInLua\ReImplementInLua.cs" />
+     <Compile Include="Assets\Examples\EmitNumbers\EmitNumbersMain.cs" />
+     <Compile Include="Assets\Scripts\Utils\Html\HtmlLink.cs" />
+     <Compile Include="Assets\Scripts\UI\Gears\GearDisplay2.cs" />
+     <Compile Include="Assets\XLua\Examples\06_Coroutine\Coroutine_Runner.cs" />
+     <Compile Include="Assets\Scripts\Core\Text\IKeyboard.cs" />
+     <Compile Include="Assets\Scripts\UI\Gears\GearFontSize.cs" />
+     <Compile Include="Assets\Scripts\Utils\XMLIterator.cs" />
+     <Compile Include="Assets\CSharp\Game\GEUI.cs" />
+     <Compile Include="Assets\XLua\Examples\08_Hotfix\StatefullTest.cs" />
+     <Compile Include="Assets\Scripts\UI\GTextField.cs" />
+     <Compile Include="Assets\Examples\Particles\CoolComponent.cs" />
+     <Compile Include="Assets\Scripts\UI\GTreeNode.cs" />
+     <Compile Include="Assets\Examples\CutScene\CutSceneMain.cs" />
+     <Compile Include="Assets\CSharp\NetWork\GENetCommon.cs" />
+     <Compile Include="Assets\Scripts\UI\GImage.cs" />
+     <Compile Include="Assets\Scripts\Core\Image.cs" />
+     <Compile Include="Assets\Scripts\Event\EventListener.cs" />
+     <Compile Include="Assets\Scripts\Core\NTexture.cs" />
+     <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest2.cs" />
+     <Compile Include="Assets\Scripts\Core\Text\Emoji.cs" />
+     <Compile Include="Assets\Scripts\Core\UpdateContext.cs" />
+     <Compile Include="Assets\Scripts\Core\DisplayObject.cs" />
+     <Compile Include="Assets\Scripts\UI\GGraph.cs" />
+     <Compile Include="Assets\Examples\Gesture\GestureMain.cs" />
+     <Compile Include="Assets\Scripts\UI\GList.cs" />
+     <Compile Include="Assets\Scripts\Tween\EaseManager.cs" />
+     <Compile Include="Assets\Scripts\UI\Gears\GearLook.cs" />
+     <Compile Include="Assets\Scripts\Tween\GTweener.cs" />
+     <Compile Include="Assets\CSharp\NetWork\GEConnect.cs" />
+     <Compile Include="Assets\Scripts\UI\GComponent.cs" />
+     <Compile Include="Assets\Examples\TurnCard\Card.cs" />
+     <Compile Include="Assets\Examples\Filter\FilterMain.cs" />
+     <Compile Include="Assets\Scripts\Core\BlendMode.cs" />
+     <Compile Include="Assets\Scripts\Core\Container.cs" />
+     <Compile Include="Assets\Scripts\Utils\XML.cs" />
+     <Compile Include="Assets\Scripts\UI\GObjectPool.cs" />
+     <Compile Include="Assets\Scripts\Utils\Timers.cs" />
+     <Compile Include="Assets\Scripts\UI\Tree\TreeNode.cs" />
+     <Compile Include="Assets\Scripts\UI\GObject.cs" />
+     <Compile Include="Assets\Scripts\UI\Tree\TreeView.cs" />
+     <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
+     <Compile Include="Assets\Examples\TurnPage\TurnPageMain.cs" />
+     <Compile Include="Assets\Scripts\UI\UIObjectFactory.cs" />
+     <Compile Include="Assets\XLua\Examples\10_SignatureLoader\SignatureLoaderTest.cs" />
+     <Compile Include="Assets\Examples\HeadBar\HeadBarMain.cs" />
+     <Compile Include="Assets\Scripts\Event\IEventDispatcher.cs" />
+     <Compile Include="Assets\Scripts\UI\UIPackage.cs" />
+     <Compile Include="Assets\Examples\Basics\BasicsMain.cs" />
+     <Compile Include="Assets\Scripts\Core\Mesh\FillMesh.cs" />
      <Compile Include="Assets\Scripts\Core\Mesh\PlaneMesh.cs" />
-     <Compile Include="Assets\Examples\RenderTexture\RenderImage.cs" />
+     <Compile Include="Assets\Scripts\UI\Action\ChangePageAction.cs" />
+     <Compile Include="Assets\Scripts\UI\UIPainter.cs" />
+     <Compile Include="Assets\Scripts\Utils\Html\HtmlParseOptions.cs" />
+     <Compile Include="Assets\Scripts\Utils\Html\HtmlButton.cs" />
+     <Compile Include="Assets\Examples\LoopList\LoopListMain.cs" />
+     <Compile Include="Assets\Scripts\Utils\ByteBuffer.cs" />
+     <Compile Include="Assets\Scripts\Utils\XMLUtils.cs" />
+     <Compile Include="Assets\XLua\Tutorial\LuaCallCSharp\LuaCallCs.cs" />
+     <Compile Include="Assets\Scripts\Filter\IFilter.cs" />
+     <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
+     <Compile Include="Assets\Scripts\Core\StageEngine.cs" />
+     <Compile Include="Assets\Examples\Extension\ExtensionMain.cs" />
+     <Compile Include="Assets\XLua\Examples\07_AsyncTest\MessageBox.cs" />
+     <Compile Include="Assets\Scripts\Core\HitTest\IHitTest.cs" />
+     <Compile Include="Assets\Scripts\UI\GTextInput.cs" />
+     <Compile Include="Assets\Scripts\UI\Relations.cs" />
+     <Compile Include="Assets\Scripts\Event\EventDispatcher.cs" />
+     <Compile Include="Assets\Examples\Bag\BagMain.cs" />
+     <Compile Include="Assets\Scripts\UI\GGroup.cs" />
+     <Compile Include="Assets\Scripts\Core\HitTest\RectHitTest.cs" />
+     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByString\ByString.cs" />
+     <Compile Include="Assets\Examples\Joystick\JoystickMain.cs" />
+     <Compile Include="Assets\Scripts\Filter\BlurFilter.cs" />
+     <Compile Include="Assets\XLua\Examples\05_NoGc\NoGc.cs" />
+     <Compile Include="Assets\Scripts\Core\Text\TouchScreenKeyboard.cs" />
      <Compile Include="Assets\Scripts\UI\GRichTextField.cs" />
      <Compile Include="Assets\Scripts\Utils\Html\HtmlImage.cs" />
      <Compile Include="Assets\Scripts\Gesture\RotationGesture.cs" />
-     <Compile Include="Assets\Scripts\UI\IUISource.cs" />
-     <Compile Include="Assets\Examples\VirtualList\VirtualListMain.cs" />
-     <Compile Include="Assets\Examples\PullToRefresh\ScrollPaneHeader.cs" />
-     <Compile Include="Assets\Scripts\UI\GList.cs" />
-     <Compile Include="Assets\Scripts\UI\UIPainter.cs" />
-     <Compile Include="Assets\Scripts\Event\EventBridge.cs" />
-     <Compile Include="Assets\Scripts\UI\Action\ChangePageAction.cs" />
-     <Compile Include="Assets\Examples\Bag\IconManager.cs" />
-     <Compile Include="Assets\Examples\BundleUsage\BundleUsageMain.cs" />
-     <Compile Include="Assets\Scripts\Tween\TweenManager.cs" />
-     <Compile Include="Assets\Scripts\UI\Transition.cs" />
-     <Compile Include="Assets\Scripts\Utils\Html\HtmlPageContext.cs" />
-     <Compile Include="Assets\Examples\Emoji\EmojiParser.cs" />
      <Compile Include="Assets\Scripts\UI\Window.cs" />
-     <Compile Include="Assets\Scripts\UI\GScrollBar.cs" />
-     <Compile Include="Assets\Scripts\Utils\Html\HtmlParseOptions.cs" />
-     <Compile Include="Assets\Scripts\Utils\Html\IHtmlPageContext.cs" />
-     <Compile Include="Assets\Examples\Guide\GuideMain.cs" />
-     <Compile Include="Assets\Scripts\Utils\Html\HtmlButton.cs" />
-     <Compile Include="Assets\Scripts\Core\HitTest\MeshColliderHitTest.cs" />
-     <Compile Include="Assets\Examples\PullToRefresh\PullToRefreshMain.cs" />
-     <Compile Include="Assets\Scripts\Core\Text\TextField.cs" />
-     <Compile Include="Assets\Scripts\Core\CaptureCamera.cs" />
-     <Compile Include="Assets\Scripts\Gesture\PinchGesture.cs" />
-     <Compile Include="Assets\Scripts\Tween\EaseManager.cs" />
+     <Compile Include="Assets\Examples\Bag\IconManager.cs" />
      <Compile Include="Assets\Examples\HitTest\HitTestMain.cs" />
-     <Compile Include="Assets\Scripts\Core\Mesh\MeshFactory.cs" />
-     <Compile Include="Assets\Scripts\UI\GTree.cs" />
-     <Compile Include="Assets\Scripts\Core\Mesh\RegularPolygonMesh.cs" />
-     <Compile Include="Assets\Scripts\UI\Gears\GearLook.cs" />
      <Compile Include="Assets\Scripts\Utils\ToolSet.cs" />
-     <Compile Include="Assets\Examples\TreeView\TreeViewMain.cs" />
-     <Compile Include="Assets\Scripts\UI\GLoader.cs" />
-     <Compile Include="Assets\Examples\ModalWaiting\Window4.cs" />
-     <Compile Include="Assets\Examples\LoopList\LoopListMain.cs" />
-     <Compile Include="Assets\Scripts\UI\Gears\GearAnimation.cs" />
-     <Compile Include="Assets\Scripts\UI\EMRenderSupport.cs" />
      <Compile Include="Assets\Examples\Transition\TransitionMain.cs" />
      <Compile Include="Assets\Scripts\UI\GButton.cs" />
-     <Compile Include="Assets\Examples\RenderTexture\Window3.cs" />
-     <Compile Include="Assets\Examples\TurnCard\TurnCardMain.cs" />
-     <Compile Include="Assets\Scripts\Core\Mesh\VertexBuffer.cs" />
-     <Compile Include="Assets\Scripts\Utils\ByteBuffer.cs" />
-     <Compile Include="Assets\Examples\Particles\ParticlesMain.cs" />
-     <Compile Include="Assets\Scripts\Core\Text\SelectionShape.cs" />
-     <Compile Include="Assets\Scripts\Tween\TweenValue.cs" />
-     <Compile Include="Assets\Scripts\Tween\GTweener.cs" />
-     <Compile Include="Assets\Examples\RenderTexture\RenderTextureMain.cs" />
-     <Compile Include="Assets\Scripts\UI\Controller.cs" />
-     <Compile Include="Assets\Scripts\Core\Mesh\RectMesh.cs" />
      <Compile Include="Assets\Scripts\Core\Text\TextFormat.cs" />
      <Compile Include="Assets\Scripts\Core\Text\BitmapFont.cs" />
-     <Compile Include="Assets\Scripts\Core\Mesh\CompositeMesh.cs" />
-     <Compile Include="Assets\Scripts\Utils\XMLUtils.cs" />
-     <Compile Include="Assets\Examples\Extension\MailItem.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\IAnimationGear.cs" />
-     <Compile Include="Assets\Scripts\UI\GLabel.cs" />
-     <Compile Include="Assets\Scripts\Core\Mesh\PolygonMesh.cs" />
+     <Compile Include="Assets\Examples\CutScene\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\UI\GComboBox.cs" />
+     <Compile Include="Assets\CSharp\Game\InitBehaviour.cs" />
+     <Compile Include="Assets\Scripts\UI\DragDropManager.cs" />
+     <Compile Include="Assets\Scripts\Core\Stage.cs" />
+     <Compile Include="Assets\Scripts\UI\Gears\GearDisplay.cs" />
+     <Compile Include="Assets\Scripts\UI\ScrollPane.cs" />
+     <Compile Include="Assets\Scripts\Utils\XMLList.cs" />
+     <Compile Include="Assets\CSharp\Game\GELua.cs" />
+     <Compile Include="Assets\Scripts\UI\UIPanel.cs" />
+     <Compile Include="Assets\Examples\ScrollPane\ScrollPaneMain.cs" />
+     <Compile Include="Assets\Scripts\Core\MaterialManager.cs" />
+     <Compile Include="Assets\Scripts\Core\Text\BaseFont.cs" />
+     <Compile Include="Assets\Scripts\Core\Text\RichTextField.cs" />
+     <Compile Include="Assets\Scripts\Core\NGraphics.cs" />
+     <Compile Include="Assets\Scripts\Utils\ZipReader.cs" />
+     <Compile Include="Assets\Scripts\UI\Margin.cs" />
+     <Compile Include="Assets\Scripts\UI\Gears\GearColor.cs" />
+     <Compile Include="Assets\Examples\Cooldown\CooldownMain.cs" />
+     <Compile Include="Assets\Examples\Curve\CurveMain.cs" />
+     <Compile Include="Assets\Scripts\Gesture\SwipeGesture.cs" />
+     <Compile Include="Assets\Scripts\Utils\UBBParser.cs" />
+     <Compile Include="Assets\Scripts\UI\Gears\GearIcon.cs" />
+     <Compile Include="Assets\Scripts\UI\Gears\GearXY.cs" />
+     <Compile Include="Assets\Scripts\Core\StageCamera.cs" />
+     <Compile Include="Assets\Examples\RenderTexture\RenderImage.cs" />
+     <Compile Include="Assets\Scripts\UI\IUISource.cs" />
+     <Compile Include="Assets\Examples\VirtualList\VirtualListMain.cs" />
+     <Compile Include="Assets\Examples\BundleUsage\BundleUsageMain.cs" />
+     <Compile Include="Assets\Scripts\UI\Transition.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearBase.cs" />
      <Compile Include="Assets\Scripts\Core\Shape.cs" />
-     <Compile Include="Assets\Scripts\Core\MovieClip.cs" />
+     <Compile Include="Assets\Scripts\UI\GRoot.cs" />
+     <Compile Include="Assets\Scripts\UI\GMovieClip.cs" />
+     <Compile Include="Assets\CSharp\NetWork\GESocket.cs" />
+     <Compile Include="Assets\Scripts\Core\Mesh\LineMesh.cs" />
+     <Compile Include="Assets\Scripts\Event\InputEvent.cs" />
+     <Compile Include="Assets\Extensions\Spine\SpineLoader.cs" />
+     <Compile Include="Assets\Scripts\Core\Text\RTLSupport.cs" />
+     <Compile Include="Assets\Examples\TurnPage\FairyBook.cs" />
+     <Compile Include="Assets\XLua\Tutorial\CSharpCallLua\CSCallLua.cs" />
+     <Compile Include="Assets\Examples\Bag\BagWindow.cs" />
+     <Compile Include="Assets\Scripts\Filter\ColorFilter.cs" />
+     <Compile Include="Assets\Scripts\UI\Gears\GearText.cs" />
+     <Compile Include="Assets\Scripts\Core\Text\FontManager.cs" />
+     <Compile Include="Assets\XLua\Examples\ExampleGenConfig.cs" />
+     <Compile Include="Assets\Scripts\Core\Mesh\StraightLineMesh.cs" />
+     <Compile Include="Assets\Scripts\Core\HitTest\ColliderHitTest.cs" />
+     <Compile Include="Assets\Scripts\Core\Mesh\RoundedRectMesh.cs" />
+     <Compile Include="Assets\Scripts\UI\Gears\IColorGear.cs" />
+     <Compile Include="Assets\XLua\Examples\07_AsyncTest\AsyncTest.cs" />
+     <Compile Include="Assets\Examples\PullToRefresh\ScrollPaneHeader.cs" />
+     <Compile Include="Assets\Scripts\Event\EventBridge.cs" />
+     <Compile Include="Assets\Scripts\Utils\Html\HtmlPageContext.cs" />
+     <Compile Include="Assets\Scripts\UI\GScrollBar.cs" />
+     <Compile Include="Assets\Scripts\Gesture\PinchGesture.cs" />
+     <Compile Include="Assets\Scripts\Core\Mesh\MeshFactory.cs" />
+     <Compile Include="Assets\XLua\Examples\09_GenericMethod\GenericMethodExample.cs" />
+     <Compile Include="Assets\Examples\Particles\ParticlesMain.cs" />
+     <Compile Include="Assets\Examples\RenderTexture\RenderTextureMain.cs" />
+     <Compile Include="Assets\Scripts\UI\Controller.cs" />
+     <Compile Include="Assets\Scripts\UI\GLabel.cs" />
      <Compile Include="Assets\Examples\ModalWaiting\ModalWaitingMain.cs" />
-     <Compile Include="Assets\Scripts\Utils\Html\HtmlElement.cs" />
-     <Compile Include="Assets\Scripts\UI\GComponent.cs" />
-     <Compile Include="Assets\Examples\EmitNumbers\EmitNumbersMain.cs" />
-     <Compile Include="Assets\Examples\CutScene\LevelManager.cs" />
-     <Compile Include="Assets\Extensions\TextMeshPro\TMPFont.cs" />
-     <Compile Include="Assets\Scripts\Event\EventContext.cs" />
-     <Compile Include="Assets\Scripts\Gesture\LongPressGesture.cs" />
      <Compile Include="Assets\Examples\Perspetive\PerspectiveMain.cs" />
-     <Compile Include="Assets\Scripts\UI\GComboBox.cs" />
      <Compile Include="Assets\Examples\Basics\Window1.cs" />
      <Compile Include="Assets\Scripts\Tween\TweenPropType.cs" />
-     <Compile Include="Assets\Scripts\Utils\Html\HtmlLink.cs" />
      <Compile Include="Assets\Scripts\Core\HitTest\PixelHitTest.cs" />
-     <Compile Include="Assets\Examples\Model\ModelMain.cs" />
-     <Compile Include="Assets\Scripts\Filter\IFilter.cs" />
-     <Compile Include="Assets\Scripts\UI\Gears\GearDisplay2.cs" />
-     <Compile Include="Assets\Examples\EmitNumbers\EmitManager.cs" />
      <Compile Include="Assets\Scripts\Tween\GPath.cs" />
-     <Compile Include="Assets\Scripts\UI\GRoot.cs" />
-     <Compile Include="Assets\Scripts\Core\Text\IKeyboard.cs" />
-     <Compile Include="Assets\Scripts\UI\Gears\GearFontSize.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearSize.cs" />
-     <Compile Include="Assets\Scripts\UI\GMovieClip.cs" />
      <Compile Include="Assets\Scripts\Utils\Html\HtmlInput.cs" />
      <Compile Include="Assets\Extensions\TextMeshPro\TMPTextFormat.cs" />
-     <Compile Include="Assets\Scripts\UI\DragDropManager.cs" />
-     <Compile Include="Assets\Scripts\Utils\XMLIterator.cs" />
-     <Compile Include="Assets\Scripts\Core\Stage.cs" />
-     <Compile Include="Assets\Scripts\Core\Stats.cs" />
-     <Compile Include="Assets\Scripts\UI\Gears\GearDisplay.cs" />
-     <Compile Include="Assets\CSharp\Game\InitUI.cs" />
-     <Compile Include="Assets\CSharp\Game\GEUI.cs" />
+     <Compile Include="Assets\Scripts\Tween\GTween.cs" />
+     <Compile Include="Assets\Scripts\Core\Mesh\EllipseMesh.cs" />
+     <Compile Include="Assets\Scripts\UI\Action\PlayTransitionAction.cs" />
+     <Compile Include="Assets\Scripts\Core\ShaderConfig.cs" />
+     <Compile Include="Assets\Examples\Joystick\JoystickModule.cs" />
+     <Compile Include="Assets\Examples\TypingEffect\TypingEffectMain.cs" />
+     <Compile Include="Assets\Examples\EmitNumbers\EmitComponent.cs" />
+     <Compile Include="Assets\Scripts\UI\AsyncCreationHelper.cs" />
+     <Compile Include="Assets\Examples\Basics\Window2.cs" />
+     <Compile Include="Assets\Scripts\UI\RelationItem.cs" />
+     <Compile Include="Assets\Scripts\UI\FieldTypes.cs" />
+     <Compile Include="Assets\Scripts\Utils\Html\HtmlParser.cs" />
+     <Compile Include="Assets\Extensions\DragonBones\DragonBonesLoader.cs" />
+     <Compile Include="Assets\Scripts\UI\TranslationHelper.cs" />
+     <Compile Include="Assets\Scripts\UI\UIConfig.cs" />
+     <Compile Include="Assets\Scripts\UI\GLoader3D.cs" />
+     <Compile Include="Assets\Scripts\UI\Action\ControllerAction.cs" />
+     <Compile Include="Assets\Examples\Guide\GuideMain.cs" />
+     <Compile Include="Assets\Scripts\Core\Text\TextField.cs" />
+     <Compile Include="Assets\Scripts\Core\Mesh\RegularPolygonMesh.cs" />
+     <Compile Include="Assets\Scripts\UI\Gears\GearAnimation.cs" />
+     <Compile Include="Assets\Scripts\UI\EMRenderSupport.cs" />
+     <Compile Include="Assets\Examples\RenderTexture\Window3.cs" />
+     <Compile Include="Assets\Examples\TurnCard\TurnCardMain.cs" />
+     <Compile Include="Assets\Scripts\Tween\TweenValue.cs" />
+     <Compile Include="Assets\Examples\Extension\MailItem.cs" />
+     <Compile Include="Assets\Extensions\TextMeshPro\TMPFont.cs" />
+     <Compile Include="Assets\Scripts\Gesture\LongPressGesture.cs" />
+     <Compile Include="Assets\Examples\Model\ModelMain.cs" />
+     <Compile Include="Assets\Scripts\Tools\LuaCodeBin.cs" />
      <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
      <None Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />
      <None Include="Assets\Resources\RenderTexture\FullScreen.shader" />
@@ -875,100 +876,100 @@
  <HintPath>C:/Program Files/Unity 2020.3.7f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEngineBridge.001">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.PixelPerfect">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="PsdPlugin">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.IK.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Psdimporter.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Path.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEditorBridge.001">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.IK.Runtime">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Triangle.Runtime">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Runtime">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.PixelPerfect.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Runtime">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Editor">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Runtime">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Xlua.Core.csproj">
-      <Project>{5bfaa99d-5c75-439c-2575-7d1aaedc3e62}</Project>
+      <Project>{aae36121-9e81-45d2-673e-b970fc490bfc}</Project>
       <Name>Xlua.Core</Name>
     </ProjectReference>
     <ProjectReference Include="Xlua.Core.Editor.csproj">
-      <Project>{e33704bc-679c-584c-28e8-c7ec692ede26}</Project>
+      <Project>{1d9eb74a-a316-9c5b-406e-59b03503c331}</Project>
       <Name>Xlua.Core.Editor</Name>
     </ProjectReference>
   </ItemGroup>

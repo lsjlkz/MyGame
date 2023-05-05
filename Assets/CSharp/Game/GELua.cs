@@ -1,4 +1,7 @@
-﻿using CSharp.Log;
+﻿using System.IO;
+using CSharp.Log;
+using UnityEditor;
+using UnityEngine;
 using XLua;
 
 namespace CSharp.Game
@@ -24,6 +27,7 @@ namespace CSharp.Game
                 return false;
             }
             _luaEnv = new LuaEnv();
+            _luaEnv.AddLoader(CustomMyLoader);
             return true;
         }
 
@@ -50,7 +54,15 @@ namespace CSharp.Game
 
         public void luaTest()
         {
-            DoString("print(345)");
+            instance().DoString("require('GEInit')");
+        }
+        
+        private byte[] CustomMyLoader(ref string fileName)
+        {
+            string luaPath = Application.dataPath + "/Resources/LuaCodeBin/" + fileName + ".lua.bin";
+            string strLuaContent = File.ReadAllText(luaPath);
+            byte[] result = System.Text.Encoding.UTF8.GetBytes(strLuaContent);
+            return result;
         }
     }
 }

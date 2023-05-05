@@ -9,9 +9,6 @@ namespace CSharp.Game
         private void Start()
         {
             DontDestroyOnLoad(this);
-            
-            
-            GEUI.AddUIPanel("Basics", "Main");
         }
 
     }

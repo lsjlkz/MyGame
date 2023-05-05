@@ -13,7 +13,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{e33704bc-679c-584c-28e8-c7ec692ede26}</ProjectGuid>
+    <ProjectGuid>{1d9eb74a-a316-9c5b-406e-59b03503c331}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -52,11 +52,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\XLua\Src\Editor\Generator.cs" />
-     <Compile Include="Assets\XLua\Src\Editor\TemplateRef.cs" />
-     <Compile Include="Assets\XLua\Src\Editor\Report.cs" />
      <Compile Include="Assets\XLua\Src\Editor\LinkXmlGen\LinkXmlGen.cs" />
+     <Compile Include="Assets\XLua\Src\Editor\Report.cs" />
+     <Compile Include="Assets\XLua\Src\Editor\TemplateRef.cs" />
      <Compile Include="Assets\XLua\Src\Editor\Hotfix.cs" />
+     <Compile Include="Assets\XLua\Src\Editor\Generator.cs" />
      <None Include="Assets\XLua\Src\Editor\Template\LuaInterfaceBridge.tpl.txt" />
      <None Include="Assets\XLua\Src\Editor\Template\LuaWrapPusher.tpl.txt" />
      <None Include="Assets\XLua\Src\Editor\Template\LuaDelegateWrap.tpl.txt" />
@@ -303,7 +303,7 @@
  <HintPath>C:/Program Files/Unity 2020.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity 2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -651,21 +651,21 @@
  <HintPath>C:/Program Files/Unity 2020.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>D:/ShuJiangUnity3D/MyGame_22_5_23/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>D:/ShuJiangUnity3D/MyGame/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Xlua.Core.csproj">
-      <Project>{5bfaa99d-5c75-439c-2575-7d1aaedc3e62}</Project>
+      <Project>{aae36121-9e81-45d2-673e-b970fc490bfc}</Project>
       <Name>Xlua.Core</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,0 +1,13 @@
+
+local uibase = require("UI/UIBase/UIBase")
+
+__MainPanelTable__ = __MainPanelTable__ or {
+    myPanel = uibase:new("MainPanel", "Basics", "Main")
+}
+
+function __MainPanelTable__:show()
+    self.myPanel:show()
+end
+
+
+return __MainPanelTable__

@@ -11,6 +11,8 @@ namespace CSharp.Game
         {
             GELua.instance().initLuaThread();
             GELog.instance().initGELog();
+
+            GELua.instance().luaTest();
             
             DontDestroyOnLoad(this);
             
