@@ -9,14 +9,16 @@ namespace CSharp.Game
     {
         private void Start()
         {
-            GELua.instance().initLuaThread();
-            GELog.instance().initGELog();
-
-            GELua.instance().luaTest();
             
             DontDestroyOnLoad(this);
             
             GRoot.inst.SetContentScaleFactor(1334, 750);
+            GELua.instance().initLuaThread();
+            GELog.instance().initGELog();
+
+            GEUI.instance().initTable();
+
+            GELua.instance().luaTest();
             
         }
     }

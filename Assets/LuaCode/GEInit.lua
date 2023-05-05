@@ -9,6 +9,7 @@ __GEInitTable__ = __GEInitTable__ or {}
 local MainPanel = require("UI/MainPanel/MainPanel")
 
 MainPanel:show()
-
+MainPanel:after_create()
+MainPanel:after_show()
 
 return __GEInitTable__

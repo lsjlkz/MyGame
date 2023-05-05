@@ -4,6 +4,8 @@
 --- DateTime: 2023/5/5 15:55
 ---
 
+GEUI = CS.CSharp.Game.GEUI
+
 __UIBaseTable__ = __UIBaseTable__ or {}
 
 
@@ -11,7 +13,7 @@ function __UIBaseTable__:show()
     if(self.isShow == true) then
         return
     end
-    CS.CSharp.Game.GEUI.instance().ShowUIPanel(self.panelName, self.pkgName, self.comName)
+    self.mainComponent = GEUI.ShowUIPanel(self.panelName, self.pkgName, self.comName)
     self.isShow = true
 end
 
@@ -19,8 +21,30 @@ function __UIBaseTable__:hide()
     if(self.isShow == false) then
         return
     end
-    CS.CSharp.Game.GEUI.instance().HideUIPanel(self.panelName)
+    GEUI.HideUIPanel(self.panelName)
     self.isShow = false
+end
+
+function __UIBaseTable__:after_create()
+    
+end
+
+
+function __UIBaseTable__:after_show()
+
+end
+
+
+function __UIBaseTable__:get_child(...)
+    local child = self.mainComponent
+    for i, v in ipairs({...}) do
+        child = child.GetChild(child, v)
+        if(child == nil) then
+            -- 找不到
+            return nil
+        end
+    end
+    return child
 end
 
 
@@ -29,7 +53,11 @@ function __UIBaseTable__:new(panelName, pkgName, comName)
         panelName = panelName,
         pkgName = pkgName,
         comName = comName,
-        isShow = false
+        isShow = false,
+        mainComponent = nil
     }
     setmetatable(o, {__index = self})
-end 
+    return o
+end
+
+return __UIBaseTable__

@@ -62,9 +62,6 @@ namespace Tools
 
         private static void WriteLuaCodeFile(string filePath, string targetFilePath)
         {
-            Debug.Log("WriteLuaCodeFile");
-            Debug.Log(filePath);
-            Debug.Log(targetFilePath);
             byte[] buf;
             using (FileStream fos = File.Create(targetFilePath))
             {

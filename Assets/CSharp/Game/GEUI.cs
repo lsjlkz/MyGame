@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using FairyGUI;
+using XLua;
 
 namespace CSharp.Game
 {
@@ -17,6 +18,17 @@ namespace CSharp.Game
             }
             return _instance;
         }
+
+        public void initTable()
+        {
+            // TODO 这里要想办法解决
+            LuaEnv luaEnv = GELua.instance().luaThread();
+            LuaTable table = luaEnv.NewTable();
+            table.Set("GEUI", this);
+            table.Set("__index", this);
+            table.SetMetaTable(luaEnv.Global);
+            luaEnv.Global.Set("GEUI", table);
+        }
         
         public static GRoot groot()
         {
@@ -29,22 +41,23 @@ namespace CSharp.Game
             UIPackage.AddPackage($"UI/{pkgName}");
         }
 
-        public void ShowUIPanel(string panelName, string pkgName, string comName)
+        public static GObject ShowUIPanel(string panelName, string pkgName, string comName)
         {
             GObject gObject;
-            if (!panelDict.TryGetValue(panelName, out gObject))
+            if (!instance().panelDict.TryGetValue(panelName, out gObject))
             {
-                if (groot().GetChild(gObject.gameObjectName) != null)
-                {
-                    // 重复添加了
-                    return;
-                }
-                groot().AddChild(gObject);
+                // 无缓存
+                gObject = AddUIPanel(pkgName, comName);
+                instance().panelDict.Add(panelName, gObject);
             }
-            gObject = AddUIPanel(pkgName, comName);
-            panelDict.Add(panelName, gObject);
+            if(groot().GetChild(gObject.gameObjectName) != null)
+            {
+                // 重复添加了
+                return gObject;
+            }
+            return groot().AddChild(gObject);
         }
-        public GObject AddUIPanel(string pkgName, string comName)
+        public static GObject AddUIPanel(string pkgName, string comName)
         {
             LoadUIPackage(pkgName);
             GObject gObject = UIPackage.CreateObject(pkgName, comName);
@@ -52,11 +65,11 @@ namespace CSharp.Game
             return gObject;
         }
 
-        public void HideUIPanel(string panelName)
+        public static void HideUIPanel(string panelName)
         {
             
             GObject gObject;
-            if (!panelDict.TryGetValue(panelName, out gObject))
+            if (!instance().panelDict.TryGetValue(panelName, out gObject))
             {
                 if (groot().GetChild(gObject.gameObjectName) == null)
                 {

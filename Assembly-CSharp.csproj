@@ -164,6 +164,7 @@
      <Compile Include="Assets\Examples\Extension\ExtensionMain.cs" />
      <Compile Include="Assets\XLua\Examples\07_AsyncTest\MessageBox.cs" />
      <Compile Include="Assets\Scripts\Core\HitTest\IHitTest.cs" />
+     <Compile Include="Assets\Scripts\Tools\LuaCodeBin.cs" />
      <Compile Include="Assets\Scripts\UI\GTextInput.cs" />
      <Compile Include="Assets\Scripts\UI\Relations.cs" />
      <Compile Include="Assets\Scripts\Event\EventDispatcher.cs" />
@@ -287,7 +288,6 @@
      <Compile Include="Assets\Extensions\TextMeshPro\TMPFont.cs" />
      <Compile Include="Assets\Scripts\Gesture\LongPressGesture.cs" />
      <Compile Include="Assets\Examples\Model\ModelMain.cs" />
-     <Compile Include="Assets\Scripts\Tools\LuaCodeBin.cs" />
      <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
      <None Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />
      <None Include="Assets\Resources\RenderTexture\FullScreen.shader" />
