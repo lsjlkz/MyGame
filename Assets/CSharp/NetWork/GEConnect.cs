@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CSharp
 {
-    public class GEConnect : MonoBehaviour
+    public class GEConnect
     {
         private static GEConnect _instance = null;
         
@@ -15,17 +15,6 @@ namespace CSharp
                 _instance = new GEConnect();
             }
             return _instance;
-        }
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
         }
     }
 

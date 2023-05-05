@@ -1,5 +1,6 @@
 ﻿using System;
 using CSharp.Log;
+using FairyGUI;
 using UnityEngine;
 
 namespace CSharp.Game
@@ -12,6 +13,8 @@ namespace CSharp.Game
             GELog.instance().initGELog();
             
             DontDestroyOnLoad(this);
+            
+            GRoot.inst.SetContentScaleFactor(1334, 750);
             
         }
     }

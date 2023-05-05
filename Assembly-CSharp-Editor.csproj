@@ -55,6 +55,15 @@
      <Compile Include="Assets\XLua\Examples\08_Hotfix\Editor\HotfixTestCfg.cs" />
      <Compile Include="Assets\XLua\Editor\ExampleConfig.cs" />
      <Compile Include="Assets\XLua\Examples\13_BuildFromCLI\Editor\BuildFromCLI.cs" />
+     <Compile Include="Assets\Examples\Editor\BuildAssetBundles.cs" />
+     <Compile Include="Assets\Scripts\Editor\UIPainterEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\UIContentScalerEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\DisplayObjectEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\UIConfigEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\StageCameraEditor.cs" />
+     <Compile Include="Assets\Scripts\Editor\EditorToolSet.cs" />
+     <Compile Include="Assets\Scripts\Editor\PackagesWindow.cs" />
+     <Compile Include="Assets\Scripts\Editor\UIPanelEditor.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity 2020.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
