@@ -2,18 +2,23 @@
 
 namespace CSharp.Log
 {
-    public class GCLog
+    public class GELog
     {
         private string filePath;
-        private static GCLog _instance = null;
+        private static GELog _instance = null;
         
-        public static GCLog instance()
+        public static GELog instance()
         {
             if (_instance == null)
             {
-                _instance = new GCLog();
+                _instance = new GELog();
             }
             return _instance;
+        }
+
+        public void initGELog()
+        {
+            // TODO 初始化Log路径等
         }
 
         public void Log(string value)

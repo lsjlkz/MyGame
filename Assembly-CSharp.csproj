@@ -52,10 +52,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\CSharp\NetWork\GCConnect.cs" />
-     <Compile Include="Assets\CSharp\NetWork\GCSocket.cs" />
-     <Compile Include="Assets\CSharp\Log\GCLog.cs" />
-     <Compile Include="Assets\CSharp\NetWork\GCNetCommon.cs" />
+     <Compile Include="Assets\CSharp\NetWork\GEConnect.cs" />
+     <Compile Include="Assets\CSharp\NetWork\GESocket.cs" />
+     <Compile Include="Assets\CSharp\Log\GELog.cs" />
+     <Compile Include="Assets\CSharp\NetWork\GENetCommon.cs" />
      <Compile Include="Assets\XLua\Examples\05_NoGc\NoGc.cs" />
      <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\ByFile.cs" />
      <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
@@ -78,7 +78,8 @@
      <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByString\ByString.cs" />
      <Compile Include="Assets\XLua\Examples\06_Coroutine\Coroutine_Runner.cs" />
      <Compile Include="Assets\XLua\Examples\07_AsyncTest\AsyncTest.cs" />
-     <Compile Include="Assets\CSharp\Game\GCLua.cs" />
+     <Compile Include="Assets\CSharp\Game\GELua.cs" />
+     <Compile Include="Assets\CSharp\Game\InitBehaviour.cs" />
      <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
      <None Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />
      <None Include="Assets\XLua\Examples\06_Coroutine\Resources\coruntine_test.lua.txt" />

@@ -4,15 +4,15 @@ using UnityEngine;
 
 namespace CSharp
 {
-    public class GCConnect : MonoBehaviour
+    public class GEConnect : MonoBehaviour
     {
-        private static GCConnect _instance = null;
+        private static GEConnect _instance = null;
         
-        public static GCConnect Instance()
+        public static GEConnect Instance()
         {
             if(_instance == null)
             {
-                _instance = new GCConnect();
+                _instance = new GEConnect();
             }
             return _instance;
         }

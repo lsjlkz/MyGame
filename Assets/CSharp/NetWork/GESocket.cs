@@ -5,7 +5,7 @@ using CSharp.Log;
 
 namespace CSharp
 {
-    public class GCSocket
+    public class GESocket
     {
         private Socket socket = null;
 
@@ -15,7 +15,7 @@ namespace CSharp
         private bool isConnecting = false;
         
 
-        public GCSocket(int _sendBufSize, int _recvBufSize)
+        public GESocket(int _sendBufSize, int _recvBufSize)
         {
             sendBufSize = _sendBufSize;
             recvBufSize = _recvBufSize;
@@ -32,7 +32,7 @@ namespace CSharp
 
             try
             {
-                AddressFamily af = GCNetCommon.GetNetType(host);
+                AddressFamily af = GENetCommon.GetNetType(host);
                 if (af == AddressFamily.Unknown)
                 {
                     // 未知ip
@@ -47,7 +47,7 @@ namespace CSharp
             }
             catch (Exception e)
             {
-                GCLog.instance().Log(e);
+                GELog.instance().Log(e);
                 return false;
             }
             return true;
@@ -68,7 +68,7 @@ namespace CSharp
             }
             catch (Exception e)
             {
-                GCLog.instance().Log(e);
+                GELog.instance().Log(e);
                 this.isConnected = false;
             }
             finally
@@ -97,7 +97,7 @@ namespace CSharp
             }
             catch (Exception e)
             {
-                GCLog.instance().Log(e);
+                GELog.instance().Log(e);
             }
         }
     }

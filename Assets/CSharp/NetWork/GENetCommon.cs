@@ -3,7 +3,7 @@ using System.Net.Sockets;
 
 namespace CSharp
 {
-    public class GCNetCommon
+    public class GENetCommon
     {
         public static AddressFamily GetNetType(string host)
         {
