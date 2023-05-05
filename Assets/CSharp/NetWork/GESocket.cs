@@ -29,7 +29,6 @@ namespace CSharp
                 return false;
             }
 
-
             try
             {
                 AddressFamily af = GENetCommon.GetNetType(host);

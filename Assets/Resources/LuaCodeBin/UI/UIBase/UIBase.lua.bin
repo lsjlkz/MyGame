@@ -32,7 +32,6 @@ end
 
 function __UIBaseTable__:get_child(...)
     local child = self.mainComponent
-    local args = {...}
     for i, v in ipairs({...}) do
         child = child.GetChild(child, v)
         if(child == nil) then

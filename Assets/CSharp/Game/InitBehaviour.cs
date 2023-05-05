@@ -16,8 +16,6 @@ namespace CSharp.Game
             GELua.instance().initLuaThread();
             GELog.instance().initGELog();
 
-            GEUI.instance().initTable();
-
             GELua.instance().luaTest();
             
         }

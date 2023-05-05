@@ -19,17 +19,6 @@ namespace CSharp.Game
             return _instance;
         }
 
-        public void initTable()
-        {
-            // TODO 这里要想办法解决
-            LuaEnv luaEnv = GELua.instance().luaThread();
-            LuaTable table = luaEnv.NewTable();
-            table.Set("GEUI", this);
-            table.Set("__index", this);
-            table.SetMetaTable(luaEnv.Global);
-            luaEnv.Global.Set("GEUI", table);
-        }
-        
         public static GRoot groot()
         {
             return GRoot.inst;
