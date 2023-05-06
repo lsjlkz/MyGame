@@ -1,29 +1,19 @@
 ﻿using System.IO;
-using CSharp.Log;
 using UnityEditor;
 using UnityEngine;
 using XLua;
 
-namespace CSharp.Game
+namespace CSharp
 {
-    public class GELua
+    public class GELua:GESingleton<GELua>
     {
-        private static GELua _instance = null;
         private LuaEnv _luaEnv = null;
 
-        public static GELua instance()
-        {
-            if (_instance == null)
-            {
-                _instance = new GELua();
-            }
-            return _instance;
-        }
-        public bool initLuaThread()
+        public bool InitLuaMainThread()
         {
             if (_luaEnv != null)
             {
-                GELog.instance().Log("repeat init lua thread");
+                GELog.Instance().Log("repeat init lua thread");
                 return false;
             }
             _luaEnv = new LuaEnv();
@@ -31,12 +21,12 @@ namespace CSharp.Game
             return true;
         }
 
-        public LuaEnv luaThread()
+        public LuaEnv GetLuaMainThread()
         {
             return _luaEnv;
         }
 
-        public bool disposeLuaThread()
+        public bool DisposeLuaMainThread()
         {
             if (_luaEnv == null)
             {
@@ -49,12 +39,12 @@ namespace CSharp.Game
 
         public void DoString(string s)
         {
-            luaThread().DoString(s);
+            GetLuaMainThread().DoString(s);
         }
 
-        public void luaTest()
+        public void LuaTest()
         {
-            instance().DoString("require('GEInit')");
+            Instance().DoString("require('GEInit')");
         }
         
         private byte[] CustomMyLoader(ref string fileName)

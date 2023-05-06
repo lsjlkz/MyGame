@@ -5,6 +5,8 @@ namespace CSharp
 {
     public class GENetCommon
     {
+
+
         public static AddressFamily GetNetType(string host)
         {
             // 连接DNS看看这个host对应哪个ip

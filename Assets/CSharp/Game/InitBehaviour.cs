@@ -1,9 +1,8 @@
 ﻿using System;
-using CSharp.Log;
 using FairyGUI;
 using UnityEngine;
 
-namespace CSharp.Game
+namespace CSharp
 {
     public class InitBehaviour:MonoBehaviour
     {
@@ -13,11 +12,18 @@ namespace CSharp.Game
             DontDestroyOnLoad(this);
             
             GRoot.inst.SetContentScaleFactor(1334, 750);
-            GELua.instance().initLuaThread();
-            GELog.instance().initGELog();
+            GELua.Instance().InitLuaMainThread();
+            GELog.Instance().InitGELog();
 
-            GELua.instance().luaTest();
+            GELua.Instance().LuaTest();
             
+            GEMilliTime.Instance().Start();
+            
+        }
+
+        private void Update()
+        {
+            GEMilliTime.Instance().Update();
         }
     }
 }

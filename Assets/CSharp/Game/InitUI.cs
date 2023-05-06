@@ -2,7 +2,7 @@
 using FairyGUI;
 using UnityEngine;
 
-namespace CSharp.Game
+namespace CSharp
 {
     public class InitUI:MonoBehaviour
     {

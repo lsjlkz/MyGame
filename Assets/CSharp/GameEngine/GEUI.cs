@@ -2,25 +2,16 @@
 using FairyGUI;
 using XLua;
 
-namespace CSharp.Game
+namespace CSharp
 {
     [LuaCallCSharp]
-    public class GEUI
+    public class GEUI:GESingleton<GEUI>
     {
-        public static GEUI _instance = null;
         public Dictionary<string, GObject> panelDict = new Dictionary<string, GObject>();
 
 
-        public static GEUI instance()
-        {
-            if (_instance == null)
-            {
-                _instance = new GEUI();
-            }
-            return _instance;
-        }
 
-        public static GRoot groot()
+        public static GRoot Groot()
         {
             return GRoot.inst;
         }
@@ -34,24 +25,24 @@ namespace CSharp.Game
         public GObject ShowUIPanel(string panelName, string pkgName, string comName)
         {
             GObject gObject;
-            if (!instance().panelDict.TryGetValue(panelName, out gObject))
+            if (!Instance().panelDict.TryGetValue(panelName, out gObject))
             {
                 // 无缓存
                 gObject = AddUIPanel(pkgName, comName);
-                instance().panelDict.Add(panelName, gObject);
+                Instance().panelDict.Add(panelName, gObject);
             }
-            if(groot().GetChild(gObject.gameObjectName) != null)
+            if(Groot().GetChild(gObject.gameObjectName) != null)
             {
                 // 重复添加了
                 return gObject;
             }
-            return groot().AddChild(gObject);
+            return Groot().AddChild(gObject);
         }
         public GObject AddUIPanel(string pkgName, string comName)
         {
             LoadUIPackage(pkgName);
             GObject gObject = UIPackage.CreateObject(pkgName, comName);
-            groot().AddChild(gObject);
+            Groot().AddChild(gObject);
             return gObject;
         }
 
@@ -59,14 +50,14 @@ namespace CSharp.Game
         {
             
             GObject gObject;
-            if (!instance().panelDict.TryGetValue(panelName, out gObject))
+            if (!Instance().panelDict.TryGetValue(panelName, out gObject))
             {
-                if (groot().GetChild(gObject.gameObjectName) == null)
+                if (Groot().GetChild(gObject.gameObjectName) == null)
                 {
                     // 居然没有
                     return;
                 }
-                groot().RemoveChild(gObject);
+                Groot().RemoveChild(gObject);
             }
         }
     }

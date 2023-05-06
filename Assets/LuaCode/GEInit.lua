@@ -6,10 +6,8 @@
 
 __GEInitTable__ = __GEInitTable__ or {}
 
-local MainPanel = require("UI/MainPanel/MainPanel")
+local gesocket = CS.CSharp.GESocket
 
-MainPanel:show()
-MainPanel:after_create()
-MainPanel:after_show()
+print(gesocket.Instance().Connect(gesocket.Instance(), "127.0.0.1", 10086))
 
 return __GEInitTable__

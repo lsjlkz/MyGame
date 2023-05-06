@@ -1,22 +1,12 @@
 ﻿using System;
 
-namespace CSharp.Log
+namespace CSharp
 {
-    public class GELog
+    public class GELog:GESingleton<GELog>
     {
         private string filePath;
-        private static GELog _instance = null;
         
-        public static GELog instance()
-        {
-            if (_instance == null)
-            {
-                _instance = new GELog();
-            }
-            return _instance;
-        }
-
-        public void initGELog()
+        public void InitGELog()
         {
             // TODO 初始化Log路径等
         }

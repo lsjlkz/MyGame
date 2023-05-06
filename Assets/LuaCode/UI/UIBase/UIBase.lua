@@ -4,7 +4,7 @@
 --- DateTime: 2023/5/5 15:55
 ---
 
-GEUI = CS.CSharp.Game.GEUI
+GEUI = CS.CSharp.GEUI
 
 __UIBaseTable__ = __UIBaseTable__ or {}
 
