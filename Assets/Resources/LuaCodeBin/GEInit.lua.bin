@@ -1,8 +1,21 @@
+local f = require("Common/Module")
+local gevent = require("Game/GEvent")
+
 
 __GEInitTable__ = __GEInitTable__ or {}
 
-local gesocket = CS.CSharp.GESocket
 
-print(gesocket.Instance().Connect(gesocket.Instance(), "127.0.0.1", 10086))
+print(CS.CSharp.LuaHelp)
+print(CS.CSharp.LuaHelp.GetDirectories)
+
+function __GEInitTable__.Init()
+    f.load_all_module("Common")
+    f.load_all_module("Game")
+    f.load_all_module("UI")
+    gevent.trigger_event(gevent.AfterLoadAllScripts)
+end
+
+__GEInitTable__.Init()
+
 
 return __GEInitTable__

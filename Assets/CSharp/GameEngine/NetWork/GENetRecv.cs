@@ -33,7 +33,7 @@ namespace CSharp
                 return false;
             }
             byte[] buf = new byte[GENetDefine.DEFAULT_BUF_SIZE];
-            int readBufSize = GESocket.Instance().Socket().Receive(buf, SocketFlags.None);
+            int readBufSize = GESocket.Instance().Socket().Receive(buf, GENetDefine.DEFAULT_BUF_SIZE, SocketFlags.None);
             this._geNetRecvBuf.WriteByte(buf, readBufSize, 0);
             return true;
         }
