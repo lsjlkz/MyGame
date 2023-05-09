@@ -6,30 +6,10 @@ function __G__Module_Table.get_lua_root_folder()
 end
 
 function __G__Module_Table.findindir(path, wefind, r_table, intofolder)
-    paths = CS.CSharp.LuaHelp.GetDirectories(path)
-    for i, file in ipairs(paths) do
-        if file ~= "." and file ~= ".." then
-            local f = path..'\\'..file
-            if string.find(f, wefind) ~= nil then
-                table.insert(r_table, f)
-            end
-            local files = CS.CSharp.LuaHelp.GetFiles(f)
-            for i, f in ipairs(files) do
-                local fn = CS.System.IO.Path.GetFileName(f)
-                local idx = string.find(fn, "LuaCodeBin")
-                local s = string.sub(fn, idx + 11, -9)
-                local l = require(s)
-                if type(l) == "table" then
-                    if l['init'] ~= nil then
-                        l['init']()
-                    end
-                end
-            end
-            local dirs = CS.CSharp.LuaHelp.GetDirectories(f)
-            for i, dir in ipairs(dirs) do
-                __G__Module_Table.findindir (dir, wefind, r_table, intofolder)
-            end
-        end
+    dirs = CS.CSharp.LuaHelp.GetDirectories(path)
+    for i, dir in ipairs(dirs) do
+        print(i)
+        print(dir)
     end
 end
 
