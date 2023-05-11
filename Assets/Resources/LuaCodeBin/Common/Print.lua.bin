@@ -1,7 +1,4 @@
-
 __G__PrintTable = __G__PrintTable or {}
-
-
 function __G__PrintTable.pprint ( t )
     local print_r_cache={}
     local print_result = {}
@@ -40,5 +37,4 @@ function __G__PrintTable.pprint ( t )
     table.insert(print_result, "")
     print(table.concat(print_result, "\n"))
 end
-
 return __G__PrintTable

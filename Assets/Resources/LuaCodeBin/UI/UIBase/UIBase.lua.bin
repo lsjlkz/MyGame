@@ -1,9 +1,5 @@
-
 GEUI = CS.CSharp.GEUI
-
 __UIBaseTable__ = __UIBaseTable__ or {}
-
-
 function __UIBaseTable__:show()
     if(self.isShow == true) then
         return
@@ -11,7 +7,6 @@ function __UIBaseTable__:show()
     self.mainComponent = GEUI.instance():ShowUIPanel(self.panelName, self.pkgName, self.comName)
     self.isShow = true
 end
-
 function __UIBaseTable__:hide()
     if(self.isShow == false) then
         return
@@ -19,17 +14,10 @@ function __UIBaseTable__:hide()
     GEUI.HideUIPanel(self.panelName)
     self.isShow = false
 end
-
 function __UIBaseTable__:after_create()
-    
 end
-
-
 function __UIBaseTable__:after_show()
-
 end
-
-
 function __UIBaseTable__:get_child(...)
     local child = self.mainComponent
     for i, v in ipairs({...}) do
@@ -40,8 +28,6 @@ function __UIBaseTable__:get_child(...)
     end
     return child
 end
-
-
 function __UIBaseTable__:new(panelName, pkgName, comName)
     local o = {
         panelName = panelName,
@@ -53,5 +39,4 @@ function __UIBaseTable__:new(panelName, pkgName, comName)
     setmetatable(o, {__index = self})
     return o
 end
-
 return __UIBaseTable__

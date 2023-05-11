@@ -1,44 +1,35 @@
-
-
-local cur_event_allot_id = 0
-
-local function allot_event_id()
-    cur_event_allot_id = cur_event_allot_id - 1
-    return cur_event_allot_id
+__G__GEventTable = __G__GEventTable or {
+    _Event_Function={},
+    _DelayEvent_Function={},
+    _DelayEvent_Trigger={}
+}
+local function set_all_event()
+    local cur_event_allot_id = 0
+    local function allot_event_id()
+        cur_event_allot_id = cur_event_allot_id - 1
+        return cur_event_allot_id
+    end
+    local function make_event()
+        return allot_event_id()
+    end
+    __G__GEventTable.AfterLoadAllScripts=make_event()
+    __G__GEventTable.AfterCallPerSecond = make_event()
+    __G__GEventTable.AfterCallPerMinute = make_event()
+    __G__GEventTable.AfterCallPerHour = make_event()
+    __G__GEventTable.AfterCallPerDay = make_event()
 end
-
-local function make_event()
-    return allot_event_id()
-end
-
-__G__GEventTable = __G__GEventTable or {}
-
-
-__G__GEventTable._Event_Function = __G__GEventTable._Event_Function or {}
-__G__GEventTable._DelayEvent_Function = __G__GEventTable._DelayEvent_Function or {}
-__G__GEventTable._DelayEvent_Trigger = __G__GEventTable._DelayEvent_Trigger or {}
-
-
-
-__G__GEventTable.AfterLoadAllScripts = make_event()
-
-
-
-
 function __G__GEventTable.reg_event(event_id, func, reg_param)
     if __G__GEventTable._Event_Function[event_id] == nil then
         __G__GEventTable._Event_Function[event_id] = {}
     end
     table.insert(__G__GEventTable._Event_Function[event_id], {func, reg_param})
 end
-
 function __G__GEventTable.reg_delay_event(event_id, func, reg_param)
     if __G__GEventTable._DelayEvent_Function[event_id] == nil then
         __G__GEventTable._DelayEvent_Function[event_id] = {}
     end
     table.insert(__G__GEventTable._DelayEvent_Function[event_id], {func, reg_param})
 end
-
 function __G__GEventTable.trigger_event(event_id, param1, param2, param3, param4)
     if __G__GEventTable._Event_Function[event_id] == nil then
         return
@@ -49,14 +40,12 @@ function __G__GEventTable.trigger_event(event_id, param1, param2, param3, param4
         func(reg_param, param1, param2, param3, param4)
     end
 end
-
 function __G__GEventTable.trigger_delay_event(event_id, param1, param2, param3, param4)
     if __G__GEventTable._DelayEvent_Function[event_id] == nil then
         return
     end
     __G__GEventTable._DelayEvent_Trigger[event_id] = {event_id, param1, param2, param3, param4}
 end
-
 local function call_per_sec_delay_event()
     if __G__GEventTable._DelayEvent_Trigger == {} then
         return
@@ -76,9 +65,8 @@ local function call_per_sec_delay_event()
     end
     __G__GEventTable._DelayEvent_Trigger = {}
 end
-
 function __G__GEventTable.init()
+    set_all_event()
     __G__GEventTable.reg_event(__G__GEventTable.AfterCallPerSecond, call_per_sec_delay_event)
 end
-
 return __G__GEventTable

@@ -1,16 +1,11 @@
 local geconnect = CS.CSharp.GEConnect
-
 local gevent = require("Game/GEvent")
-
-
 __G__ConnectTable = __G__ConnectTable or {}
-
 function __G__ConnectTable.Connect()
+    print("Connect")
     geconnect.Connect("127.0.0.1", 10086)
 end
-
 function __G__ConnectTable.init()
     gevent.reg_event(gevent.AfterLoadAllScripts, __G__ConnectTable.Connect)
 end
-
 return __G__ConnectTable

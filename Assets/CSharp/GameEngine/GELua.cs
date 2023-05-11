@@ -37,9 +37,45 @@ namespace CSharp
             return true;
         }
 
-        public void DoString(string s)
+        public void Tick()
         {
-            GetLuaMainThread().DoString(s);
+            GetLuaMainThread().Tick();
+        }
+
+        public object[] DoString(string s)
+        {
+            return GetLuaMainThread().DoString(s);
+        }
+
+        public LuaTable LoadString(string s)
+        {
+            return GetLuaMainThread().LoadString<LuaTable>(s);
+        }
+        
+        public LuaTable LoadTable(string luaPath)
+        {
+            string path = LuaHelp.GetLuaScriptPath(luaPath);
+            string luaText = File.ReadAllText(path);
+            return GetLuaMainThread().LoadString<LuaTable>(luaText);
+        }
+
+        public void DoFile(string absPath)
+        {
+            string luaText = File.ReadAllText(absPath);
+            object[] ret = DoString(luaText);
+            if (ret.Length == 0)
+            {
+                return;
+            }
+            LuaTable luaTable = (LuaTable) ret[0];
+            LuaFunction init = luaTable.Get<LuaFunction>("init");
+            object isInit = luaTable.Get<object>("is_init");
+            if (isInit != null || init == null)
+            {
+                return;
+            }
+            ret = init.Call();
+            luaTable.Set<string, bool>("is_init", true);
         }
 
         public void LuaTest()
@@ -49,7 +85,7 @@ namespace CSharp
         
         private byte[] CustomMyLoader(ref string fileName)
         {
-            string luaPath = Application.dataPath + "/Resources/LuaCodeBin/" + fileName + ".lua.bin";
+            string luaPath = PathHelp.GetLuaCodePath() + "\\" + fileName + PathHelp.LuaCodeBinEnd;
             string strLuaContent = File.ReadAllText(luaPath);
             byte[] result = System.Text.Encoding.UTF8.GetBytes(strLuaContent);
             return result;

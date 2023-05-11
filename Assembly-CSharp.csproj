@@ -144,6 +144,7 @@
      <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest2.cs" />
      <Compile Include="Assets\Scripts\Core\Text\Emoji.cs" />
      <Compile Include="Assets\Scripts\Core\UpdateContext.cs" />
+     <Compile Include="Assets\CSharp\Game\PathHelp.cs" />
      <Compile Include="Assets\Scripts\Core\DisplayObject.cs" />
      <Compile Include="Assets\Scripts\UI\GGraph.cs" />
      <Compile Include="Assets\Examples\Gesture\GestureMain.cs" />
@@ -156,6 +157,7 @@
      <Compile Include="Assets\XLua\Gen\Tutorial_CSCallLua_ItfDBridge.cs" />
      <Compile Include="Assets\Scripts\Tween\GTweener.cs" />
      <Compile Include="Assets\CSharp\GameEngine\NetWork\GEConnect.cs" />
+     <Compile Include="Assets\XLua\Gen\CSharp_GEDatetimeWrap.cs" />
      <Compile Include="Assets\XLua\Gen\UnityEngine_TimeWrap.cs" />
      <Compile Include="Assets\XLua\Gen\UnityEngine_Vector3Wrap.cs" />
      <Compile Include="Assets\Scripts\UI\GComponent.cs" />
@@ -164,6 +166,7 @@
      <Compile Include="Assets\Examples\Filter\FilterMain.cs" />
      <Compile Include="Assets\Scripts\Core\BlendMode.cs" />
      <Compile Include="Assets\XLua\Gen\XLuaTest_InvokeLua_ICalcBridge.cs" />
+     <Compile Include="Assets\XLua\Gen\CSharp_LuaHelpWrap.cs" />
      <Compile Include="Assets\XLua\Gen\UnityEngine_TextAssetWrap.cs" />
      <Compile Include="Assets\Scripts\Core\Container.cs" />
      <Compile Include="Assets\Scripts\Utils\XML.cs" />
@@ -180,8 +183,10 @@
      <Compile Include="Assets\Scripts\Event\IEventDispatcher.cs" />
      <Compile Include="Assets\XLua\Gen\XLuaTest_PeddingWrap.cs" />
      <Compile Include="Assets\XLua\Gen\System_Collections_IEnumeratorBridge.cs" />
+     <Compile Include="Assets\XLua\Gen\CSharp_PathHelpWrap.cs" />
      <Compile Include="Assets\Scripts\UI\UIPackage.cs" />
      <Compile Include="Assets\Examples\Basics\BasicsMain.cs" />
+     <Compile Include="Assets\CSharp\GameLua\LuaHelp.cs" />
      <Compile Include="Assets\Scripts\Core\Mesh\FillMesh.cs" />
      <Compile Include="Assets\Scripts\Core\Mesh\PlaneMesh.cs" />
      <Compile Include="Assets\Scripts\UI\Action\ChangePageAction.cs" />
@@ -215,6 +220,7 @@
      <Compile Include="Assets\Scripts\UI\GGroup.cs" />
      <Compile Include="Assets\Scripts\Core\HitTest\RectHitTest.cs" />
      <Compile Include="Assets\CSharp\GameEngine\NetWork\GENetBuf.cs" />
+     <Compile Include="Assets\CSharp\GameEngine\GETime.cs" />
      <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByString\ByString.cs" />
      <Compile Include="Assets\Examples\Joystick\JoystickMain.cs" />
      <Compile Include="Assets\Scripts\Filter\BlurFilter.cs" />
@@ -241,6 +247,7 @@
      <Compile Include="Assets\Scripts\UI\DragDropManager.cs" />
      <Compile Include="Assets\Scripts\Core\Stage.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearDisplay.cs" />
+     <Compile Include="Assets\XLua\Gen\CSharp_LuaBehaviourWrap.cs" />
      <Compile Include="Assets\Scripts\UI\ScrollPane.cs" />
      <Compile Include="Assets\Scripts\Utils\XMLList.cs" />
      <Compile Include="Assets\CSharp\GameEngine\GELua.cs" />
@@ -261,6 +268,7 @@
      <Compile Include="Assets\Scripts\Gesture\SwipeGesture.cs" />
      <Compile Include="Assets\Scripts\Utils\UBBParser.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearIcon.cs" />
+     <Compile Include="Assets\CSharp\GameLua\LuaBehaviour.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearXY.cs" />
      <Compile Include="Assets\Scripts\Core\StageCamera.cs" />
      <Compile Include="Assets\Examples\RenderTexture\RenderImage.cs" />
@@ -269,6 +277,7 @@
      <Compile Include="Assets\XLua\Gen\XLuaTest_Foo2ParentWrap.cs" />
      <Compile Include="Assets\Examples\BundleUsage\BundleUsageMain.cs" />
      <Compile Include="Assets\Scripts\UI\Transition.cs" />
+     <Compile Include="Assets\CSharp\GameEngine\GEDatetime.cs" />
      <Compile Include="Assets\XLua\Gen\XLuaTest_FooWrap.cs" />
      <Compile Include="Assets\XLua\Gen\UnityEngine_LightWrap.cs" />
      <Compile Include="Assets\XLua\Gen\UnityEngine_ResourcesWrap.cs" />
@@ -339,6 +348,7 @@
      <Compile Include="Assets\Scripts\UI\TranslationHelper.cs" />
      <Compile Include="Assets\Scripts\UI\UIConfig.cs" />
      <Compile Include="Assets\Scripts\UI\GLoader3D.cs" />
+     <Compile Include="Assets\CSharp\GameResource\ResourceMgr.cs" />
      <Compile Include="Assets\Scripts\UI\Action\ControllerAction.cs" />
      <Compile Include="Assets\XLua\Gen\UnityEngine_ComponentWrap.cs" />
      <Compile Include="Assets\XLua\Gen\PackUnpack.cs" />
@@ -355,29 +365,50 @@
      <Compile Include="Assets\Scripts\Gesture\LongPressGesture.cs" />
      <Compile Include="Assets\XLua\Gen\CSharp_GEUIWrap.cs" />
      <Compile Include="Assets\Examples\Model\ModelMain.cs" />
-     <Compile Include="Assets\CSharp\Game\LuaHelp.cs" />
-     <Compile Include="Assets\XLua\Gen\CSharp_LuaHelpWrap.cs" />
+     <Compile Include="Assets\Resources\UnityChan\Scripts\IdleChanger.cs" />
+     <Compile Include="Assets\Resources\UnityChan\Scripts\FaceUpdate.cs" />
+     <Compile Include="Assets\Resources\UnityChan\Scripts\AutoBlink.cs" />
+     <Compile Include="Assets\Resources\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
+     <Compile Include="Assets\Resources\UnityChan\Scripts\SpringCollider.cs" />
+     <Compile Include="Assets\Resources\UnityChan\Scripts\SpringBone.cs" />
+     <Compile Include="Assets\Resources\UnityChan\Scripts\SpringManager.cs" />
+     <Compile Include="Assets\Resources\UnityChan\Scripts\IKCtrlRightHand.cs" />
+     <Compile Include="Assets\Resources\UnityChan\Scripts\RandomWind.cs" />
+     <Compile Include="Assets\Resources\UnityChan\Scripts\ThirdPersonCamera.cs" />
+     <Compile Include="Assets\Resources\UnityChan\Scripts\CameraController.cs" />
+     <None Include="Assets\Resources\UnityChan\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
      <None Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />
+     <None Include="Assets\Resources\UnityChan\Art\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
      <None Include="Assets\Resources\RenderTexture\FullScreen.shader" />
      <None Include="Assets\Resources\Role\Materials\Role-Diffuse.shader" />
      <None Include="Assets\XLua\Examples\06_Coroutine\Resources\coruntine_test.lua.txt" />
+     <None Include="Assets\Resources\UnityChan\Art\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
      <None Include="Assets\XLua\Resources\xlua\util.lua.txt" />
+     <None Include="Assets\Resources\UnityChan\Art\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
      <None Include="Assets\Resources\Shaders\FairyGUI-Text.shader" />
      <None Include="Assets\XLua\Gen\link.xml" />
      <None Include="Assets\Resources\Shaders\FairyGUI-Image.shader" />
+     <None Include="Assets\Resources\UnityChan\Art\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
+     <None Include="Assets\Resources\UnityChan\Art\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
      <None Include="Assets\XLua\Resources\perf\profiler.lua.txt" />
      <None Include="Assets\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
      <None Include="Assets\Shader\BlackSilk.shader" />
+     <None Include="Assets\Resources\UnityChan\Audio\Voice\unity-chan_voice_list.txt" />
      <None Include="Assets\XLua\Resources\perf\memory.lua.txt" />
+     <None Include="Assets\Resources\UnityChan\Art\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
      <None Include="Assets\XLua\Examples\03_UIEvent\ButtonInteraction.lua.txt" />
+     <None Include="Assets\Resources\UnityChan\Art\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
      <None Include="Assets\XLua\Examples\02_U3DScripting\LuaTestScript.lua.txt" />
      <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\message_box.lua.txt" />
+     <None Include="Assets\Resources\UnityChan\Art\Stage\Shader\AlphaMask.shader" />
      <None Include="Assets\Resources\Shaders\FairyGUI-BMFont.shader" />
      <None Include="Assets\XLua\Resources\tdr\tdr.lua.txt" />
      <None Include="Assets\XLua\CHANGELOG.txt" />
      <None Include="Assets\Extensions\TextMeshPro\Shaders\FairyGUI-TMP.shader" />
+     <None Include="Assets\Resources\UnityChan\Art\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
      <None Include="Assets\XLua\Examples\06_Coroutine\Resources\cs_coroutine.lua.txt" />
+     <None Include="Assets\Resources\UnityChan\Art\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity 2020.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

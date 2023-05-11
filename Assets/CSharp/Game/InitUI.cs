@@ -8,6 +8,7 @@ namespace CSharp
     {
         private void Start()
         {
+            GRoot.inst.SetContentScaleFactor(1334, 750);
             DontDestroyOnLoad(this);
         }
 

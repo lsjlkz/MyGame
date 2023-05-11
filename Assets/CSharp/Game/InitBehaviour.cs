@@ -1,5 +1,6 @@
 ﻿using System;
 using FairyGUI;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace CSharp
@@ -11,7 +12,6 @@ namespace CSharp
             
             DontDestroyOnLoad(this);
             
-            GRoot.inst.SetContentScaleFactor(1334, 750);
             GELua.Instance().InitLuaMainThread();
             GELog.Instance().InitGELog();
 

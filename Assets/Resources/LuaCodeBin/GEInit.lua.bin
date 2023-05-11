@@ -1,21 +1,20 @@
-local f = require("Common/Module")
-local gevent = require("Game/GEvent")
-
-
+local module = require("Common/Module")
 __GEInitTable__ = __GEInitTable__ or {}
-
-
-print(CS.CSharp.LuaHelp)
-print(CS.CSharp.LuaHelp.GetDirectories)
-
 function __GEInitTable__.Init()
-    f.load_all_module("Common")
-    f.load_all_module("Game")
-    f.load_all_module("UI")
-    gevent.trigger_event(gevent.AfterLoadAllScripts)
+    __GEInitTable__.load_all_script()
+    require("GameObjectScript/GOAddScriptExample")
 end
-
+function __GEInitTable__.first_load_script()
+    local gevent = require("Game/GEvent")
+    gevent.init()
+    gevent['is_init'] = true
+end
+function __GEInitTable__.load_all_script()
+    __GEInitTable__.first_load_script()
+    CS.CSharp.LuaHelp.LoadPackageAllScript("Common")
+    CS.CSharp.LuaHelp.LoadPackageAllScript("Game")
+    CS.CSharp.LuaHelp.LoadPackageAllScript("UI")
+    module.load_all_script()
+end
 __GEInitTable__.Init()
-
-
 return __GEInitTable__
