@@ -376,6 +376,10 @@
      <Compile Include="Assets\Resources\UnityChan\Scripts\RandomWind.cs" />
      <Compile Include="Assets\Resources\UnityChan\Scripts\ThirdPersonCamera.cs" />
      <Compile Include="Assets\Resources\UnityChan\Scripts\CameraController.cs" />
+     <Compile Include="Assets\CSharp\GameUI\FairyGUIDelegate.cs" />
+     <Compile Include="Assets\CSharp\GameUI\BindLuaEvent.cs" />
+     <Compile Include="Assets\XLua\Gen\CSharp_DelegateEventCallbackProxyWrap.cs" />
+     <Compile Include="Assets\XLua\Gen\CSharp_BindLuaEventWrap.cs" />
      <None Include="Assets\Resources\UnityChan\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
      <None Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />

@@ -3,22 +3,15 @@
 --- Created by lsjlkz.
 --- DateTime: 2023/5/5 12:00
 ---
-local module = require("Common/Module")
 
 __GEInitTable__ = __GEInitTable__ or {}
 
 function __GEInitTable__.Init()
     __GEInitTable__.load_all_script()
     
-    require("GameObjectScript/GOAddScriptExample")
-    
-    
 end
 
 function __GEInitTable__.first_load_script()
-    local gevent = require("Game/GEvent")
-    gevent.init()
-    gevent['is_init'] = true
 end
 
 function __GEInitTable__.load_all_script()
@@ -28,11 +21,14 @@ function __GEInitTable__.load_all_script()
     CS.CSharp.LuaHelp.LoadPackageAllScript("Game")
     CS.CSharp.LuaHelp.LoadPackageAllScript("UI")
 
-
+    local module = require("Common/Module")
     module.load_all_script()
 end
 
-__GEInitTable__.Init()
 
+if __GEInitTable__.is_init ~= true then
+    __GEInitTable__.is_init = true
+    __GEInitTable__.Init()
+end
 
 return __GEInitTable__

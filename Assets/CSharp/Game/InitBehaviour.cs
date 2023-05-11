@@ -1,5 +1,6 @@
 ﻿using System;
 using FairyGUI;
+using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
@@ -9,6 +10,10 @@ namespace CSharp
     {
         private void Start()
         {
+#if UNITY_EDITOR
+            // 如果是编辑器模式的话，那就先build一下
+            Tools.LuaCodeBin.BuildLuaCodeBin();
+#endif
             
             DontDestroyOnLoad(this);
             

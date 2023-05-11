@@ -16,7 +16,6 @@ namespace CSharp
 #if UNITY_EDITOR
             return UnityEngine.Application.dataPath + LuaCodeRelation;
 #endif
-            // TODO 
             return UnityEngine.Application.dataPath + LuaCodeRelation;
         }
     }

@@ -15,7 +15,7 @@ namespace Tools
 
         
         [MenuItem("Lua/ExportLuaCodeBin")]
-        private static void BuildLuaCodeBin()
+        public static void BuildLuaCodeBin()
         {
             string binPath = PathHelp.GetLuaCodePath();
             if (Directory.Exists(binPath))

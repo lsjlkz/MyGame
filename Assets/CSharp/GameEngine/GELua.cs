@@ -63,19 +63,6 @@ namespace CSharp
         {
             string luaText = File.ReadAllText(absPath);
             object[] ret = DoString(luaText);
-            if (ret.Length == 0)
-            {
-                return;
-            }
-            LuaTable luaTable = (LuaTable) ret[0];
-            LuaFunction init = luaTable.Get<LuaFunction>("init");
-            object isInit = luaTable.Get<object>("is_init");
-            if (isInit != null || init == null)
-            {
-                return;
-            }
-            ret = init.Call();
-            luaTable.Set<string, bool>("is_init", true);
         }
 
         public void LuaTest()

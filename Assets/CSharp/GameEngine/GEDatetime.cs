@@ -62,9 +62,30 @@ namespace CSharp
                 return false;
             }
             this._localMachineSecondsSinceStartUp = t;
+            this.TriggerPerSecondEvent();
             return true;
         }
-        
+
+        public void TriggerPerSecondEvent()
+        {
+            // 触发每秒的事件
+            this.TriggerLuaPerSecondEvent();
+        }
+
+        public void TriggerLuaPerSecondEvent()
+        {
+            // lua层
+            LuaEnv luaEnv = GELua.Instance().GetLuaMainThread();
+            LuaTable gevent = luaEnv.Global.Get<LuaTable>("__G__GEventTable");
+            if (gevent == null)
+            {
+                GELog.Instance().Log("TriggerLuaPerSecondEvent:__G__GEventTable is null");
+                return;
+            }
+            int e = gevent.Get<int>("AfterCallPerSecond");
+            LuaFunction trigger_event = gevent.Get<LuaFunction>("trigger_event");
+            trigger_event.Call(e);
+        }
 
     }
 }

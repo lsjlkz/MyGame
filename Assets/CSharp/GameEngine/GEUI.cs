@@ -16,49 +16,45 @@ namespace CSharp
             return GRoot.inst;
         }
 
-        public static void LoadUIPackage(string pkgName)
+        public static UIPackage LoadUIPackage(string pkgName)
         {
             // 加载UI包
-            UIPackage.AddPackage($"UI/{pkgName}");
+            return UIPackage.AddPackage($"UI/{pkgName}");
         }
 
-        public GObject ShowUIPanel(string panelName, string pkgName, string comName)
+        public static GObject CreateUIPanel(string panelName, string pkgName, string comName)
         {
             GObject gObject;
             if (!Instance().panelDict.TryGetValue(panelName, out gObject))
             {
                 // 无缓存
-                gObject = AddUIPanel(pkgName, comName);
+                gObject = UIPackage.CreateObject(pkgName, comName);
+                gObject.gameObjectName = panelName;
                 Instance().panelDict.Add(panelName, gObject);
             }
-            if(Groot().GetChild(gObject.gameObjectName) != null)
-            {
-                // 重复添加了
-                return gObject;
-            }
-            return Groot().AddChild(gObject);
-        }
-        public GObject AddUIPanel(string pkgName, string comName)
-        {
-            LoadUIPackage(pkgName);
-            GObject gObject = UIPackage.CreateObject(pkgName, comName);
-            Groot().AddChild(gObject);
             return gObject;
         }
-
-        public void HideUIPanel(string panelName)
+        
+        public static bool ShowUIPanel(string panelName)
         {
-            
             GObject gObject;
             if (!Instance().panelDict.TryGetValue(panelName, out gObject))
             {
-                if (Groot().GetChild(gObject.gameObjectName) == null)
-                {
-                    // 居然没有
-                    return;
-                }
-                Groot().RemoveChild(gObject);
+                return false;
             }
+            Groot().AddChild(gObject);
+            return true;
+            
+        }
+        public static void HideUIPanel(string panelName)
+        {
+            GObject gObject = Groot().GetChild(panelName);
+            if (gObject == null)
+            {
+                // 居然没有
+                return;
+            }
+            Groot().RemoveChild(gObject);
         }
     }
 }

@@ -1,10 +1,34 @@
 local uibase = require("UI/UIBase/UIBase")
-__MainPanelTable__ = __MainPanelTable__ or uibase:new("MainPanel", "Basics", "Main")
+__MainPanelTable__ = __MainPanelTable__ or uibase:new("MainPanel", "main", "main_panel")
 function __MainPanelTable__:after_create()
-    self.btn_Button = self:get_child("btn_Button")
+    self.btn_1 = self:get_child("btn_1")
+    self.btn_2 = self:get_child("btn_2")
+    self.input = self:get_child("input")
+    self.title = self:get_child("title")
+    self:bind_click_delegate(self.click_btn_1, self.btn_1)
+    self:bind_click_delegate(self.click_btn_2, "btn_2")
 end
 function __MainPanelTable__:after_show()
-    print(self.btn_Button)
-    self.btn_Button.title = "测试"
+    self.title.text = "这是测试标题"
+end
+function __MainPanelTable__:click_btn_1(ctx)
+    print("click_btn_1")
+    print(ctx.sender)
+end
+function __MainPanelTable__:click_btn_2()
+    print("click_btn_2")
+    print("输入文本为" .. self.input.text)
+end
+local function open_main_panel()
+    local uiMgr = require("UI/UIMgr")
+    uiMgr.show_panel(__MainPanelTable__.panelName)
+end
+local function init()
+    local gevent = require("Game/GEvent")
+    gevent.reg_event(gevent.AfterLoadAllScripts, open_main_panel)
+end
+if __MainPanelTable__.is_init == nil then
+    __MainPanelTable__.is_init = nil
+    init()
 end
 return __MainPanelTable__
