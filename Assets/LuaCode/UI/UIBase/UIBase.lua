@@ -4,8 +4,9 @@
 --- DateTime: 2023/5/5 15:55
 ---
 
-GEUI = CS.CSharp.GEUI
+local GEUI = CS.CSharp.GEUI
 local uiMgr = require("UI/UIMgr")
+require("UI/UIBase/UIDelegate")
 
 __UIBaseTable__ = __UIBaseTable__ or {}
 
@@ -60,16 +61,6 @@ function __UIBaseTable__:get_child(...)
     end
     return child
 end
-
-function __UIBaseTable__:bind_click_delegate(delegate, ...)
-    local component = select(1, ...)
-    if type(component) ~= "userdata" then
-        component = self:get_child(...)
-    end
-    local delegate_proxy = CS.CSharp.BindLuaEvent.BindLuaEventFun(self, component, delegate)
-    return delegate_proxy
-end
-
 
 function __UIBaseTable__:new(panelName, pkgName, comName)
     local panel = {

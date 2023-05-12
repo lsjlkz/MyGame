@@ -15,6 +15,8 @@ function __MainPanelTable__:after_create()
     self.title = self:get_child("title")
     self:bind_click_delegate(self.click_btn_1, self.btn_1)
     self:bind_click_delegate(self.click_btn_2, "btn_2")
+    self:bind_focus_out_delegate(self.input_change, self.input)
+    self:bind_onchange_delegate(self.input_change, self.input)
 end
 
 function __MainPanelTable__:after_show()
@@ -29,6 +31,10 @@ end
 function __MainPanelTable__:click_btn_2()
     print("click_btn_2")
     print("输入文本为" .. self.input.text)
+end
+
+function __MainPanelTable__:input_change()
+    print("__MainPanelTable__:input_change")
 end
 
 local function open_main_panel()
