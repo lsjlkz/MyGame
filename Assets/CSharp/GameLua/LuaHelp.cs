@@ -47,5 +47,10 @@ namespace CSharp
             GameObject instantiatedPrefab = GameObject.Instantiate(prefab);
             return instantiatedPrefab;
         }
+
+        public static void LoadPrefabAsync(string path, LuaTable self, LuaFunction callback)
+        {
+            ResourceMgr.Instance().LoadPrefabAsync(path, self, callback);
+        }
     }
 }

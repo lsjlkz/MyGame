@@ -7,10 +7,10 @@ namespace CSharp
     [LuaCallCSharp]
     public class LuaBehaviour:MonoBehaviour
     {
-        private LuaTable _luaTable = null;
-        private Action _luaStart;
-        private Action _luaUpdate;
-        private Action _luaOnDestory;
+        private LuaTable owner = null;
+        private LuaFunction _luaStart = null;
+        private LuaFunction _luaUpdate = null;
+        private LuaFunction _luaOnDestory = null;
 
         private int _lastUpdateSeconds = 0;
         private int _deletaUpdateSeconds = 1;
@@ -18,43 +18,49 @@ namespace CSharp
         // TODO 现在的脚本都是放到同一个luaEnv中，看情况需要放到单独的luaEnv中
         public LuaBehaviour()
         {
-            
         }
 
-        public LuaBehaviour(LuaTable luaTable)
+        public LuaBehaviour(LuaTable _owner)
         {
-            this._luaTable = luaTable;
+            SetLuaTable(_owner);
         }
 
         public LuaBehaviour(string path)
         {
             LuaTable luaTable = GELua.Instance().LoadTable(path);
-            this._luaTable = luaTable;
+            SetLuaTable(luaTable);
         }
 
-        public void SetLuaTable(LuaTable luaTable)
+        private void Awake()
         {
-            luaTable.Set("__index", luaTable);
-            luaTable.SetMetaTable(luaTable);
+            this.gameObject.SetActive(false);
+        }
+
+        public void SetLuaTable(LuaTable _owner)
+        {
+            owner = _owner;
+            // _owner.Set("__index", _owner);
+            // _owner.SetMetaTable(_owner);
             
-            luaTable.Set("self", this);
+            _owner.Set("this", this);
             
-            this._luaStart = luaTable.Get<Action>("Start");
-            this._luaUpdate = luaTable.Get<Action>("Update");
-            this._luaOnDestory = luaTable.Get<Action>("OnDestroy");
-            Action luaAwake = luaTable.Get<Action>("Awake");
+            this._luaStart = _owner.Get<LuaFunction>("Start");
+            this._luaUpdate = _owner.Get<LuaFunction>("Update");
+            this._luaOnDestory = _owner.Get<LuaFunction>("OnDestroy");
+            LuaFunction luaAwake = _owner.Get<LuaFunction>("Awake");
             
             if (luaAwake != null)
             {
-                luaAwake();
+                luaAwake.Call(owner);
             }
+            this.gameObject.SetActive(true);
         }
         
         private void Start()
         {
             if (_luaStart != null)
             {
-                _luaStart();
+                _luaStart.Call(owner);
             }
             int gameSeconds = GEDatetime.Instance().GetLocalMachineSecondsSinceStartUp();
             this._lastUpdateSeconds = gameSeconds;
@@ -72,20 +78,20 @@ namespace CSharp
                 return;
             }
             this._lastUpdateSeconds = gameSeconds;
-            _luaUpdate();
+            _luaUpdate.Call(owner);
         }
 
         private void OnDestroy()
         {
             if (_luaOnDestory != null)
             {
-                _luaOnDestory();
+                _luaOnDestory.Call(owner);
             }
 
-            if (_luaTable != null)
+            if (owner != null)
             {
-                _luaTable.Dispose();
-                _luaTable = null;
+                owner.Dispose();
+                owner = null;
             }
         }
     }

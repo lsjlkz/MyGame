@@ -7,29 +7,41 @@
 local script_example = {}
 
 function script_example:Awake()
-    self = script_example.self
 end
 
-function script_example:Start()
+function script_example.Start()
+    
+    
     math.randomseed(os.time())
 
-    local role = CS.CSharp.LuaHelp.LoadPrefab("unitychan_dynamic")
-    role.name = "unitychan_dynamic"
-    
-    self = script_example.self
-    role.transform:SetParent(self.gameObject.transform)
+    -- 同步加载
+    --local role = CS.CSharp.LuaHelp.LoadPrefab("unitychan_dynamic")
+    --role.name = "unitychan_dynamic"
+    --
+    --self = script_example.self
+    --role.transform:SetParent(self.gameObject.transform)
+    -- 异步加载
+    CS.CSharp.LuaHelp.LoadPrefabAsync("unitychan_dynamic", self, self.load_prefab_callback)
+end
+
+function script_example:load_prefab_callback(gameObject)
+    --print(self)
+    print(gameObject)
 end
 
 function script_example:Update()
     -- TODO 
-    self = script_example.self
-    local go = self.gameObject
+    --self = script_example.self
+    local go = self.this.gameObject
     local transform = go.transform
     local v3 = transform.position
     v3.x = v3.x + 0.1
     transform.position = v3
-    
+
     local role = transform:Find("unitychan_dynamic")
+    if role == nil then
+        return
+    end
     local ani = role:GetComponent(typeof(CS.UnityEngine.Animator))
     local pose_index = math.random(1, 31)
     local pose_index_str = string.format("%02d", pose_index)
@@ -49,7 +61,7 @@ function script_example:Update()
 end 
 
 function script_example:OnDestroy()
-    self = script_example.self
+    --self = script_example.self
 end
 
 return script_example

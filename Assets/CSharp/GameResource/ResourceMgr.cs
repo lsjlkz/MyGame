@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using XLua;
 
 namespace CSharp
 {
@@ -23,6 +24,18 @@ namespace CSharp
             }
 
             return true;
+        }
+        
+        public void LoadPrefabAsync(string path, LuaTable self, LuaFunction callback)
+        {
+            string prefabPath =  "Prefabs\\" + path;
+            ResourceRequest request = Resources.LoadAsync(prefabPath, typeof(GameObject));
+            request.completed += (o =>
+            {
+                GameObject prefabObject = Resources.Load<GameObject>(prefabPath);
+                GameObject gameObject = GameObject.Instantiate(prefabObject);
+                callback.Call(self, gameObject);
+            });
         }
 
     }
