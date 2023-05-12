@@ -39,5 +39,15 @@ namespace CSharp
             this.isHold = true;
             return true;
         }
+
+        public void WriteStream(GEStream geStream)
+        {
+            foreach (byte[] buf in geStream.BufQueue)
+            {
+                this.WriteByte(buf, buf.Length, 0);
+            }
+
+            this.WriteByte(geStream.CurBuf, geStream.CurBufFence, 0);
+        }
     }
 }

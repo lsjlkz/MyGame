@@ -20,7 +20,6 @@ namespace CSharp
                 // 还在读
                 return this.RecoverReadMsg();
             }
-            // 发送的时候是4字节对齐的，所以肯定可以读到4字节
             if (!this.CanReadBuf())
             {
                 // 空了，不用读
@@ -60,12 +59,11 @@ namespace CSharp
 
         public bool CanReadBuf()
         {
-            if (this.CanReadSize() >= 4)
+            if (this.CanReadSize() > 0)
             {
-                // 至少还可以读到一个4字节
+                // 至少还可以读到一个字节
                 return true;
             }
-            // 不够4字节了，那就没有用了
             if (this.bufQueue.Count != 0)
             {
                 this.DelNetBuf(this.readBuf);
