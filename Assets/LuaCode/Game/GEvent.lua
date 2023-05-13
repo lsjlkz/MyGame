@@ -5,32 +5,11 @@
 ---
 
 
-local cur_event_allot_id = 0
-
---为什么这里用负数，因为玩家身上存储了正数的索引，当玩家的数据改变后，也会触发事件
-local function allot_event_id()
-    cur_event_allot_id = cur_event_allot_id - 1
-    return cur_event_allot_id
-end
-
-local function make_event()
-    return allot_event_id()
-end
-
-__G__GEventTable = __G__GEventTable or {}
-
-
-__G__GEventTable._Event_Function = __G__GEventTable._Event_Function or {}
-__G__GEventTable._DelayEvent_Function = __G__GEventTable._DelayEvent_Function or {}
-__G__GEventTable._DelayEvent_Trigger = __G__GEventTable._DelayEvent_Trigger or {}
-
-
-
-__G__GEventTable.AfterLoadAllScripts = make_event()
-
-
-
-
+__G__GEventTable = __G__GEventTable or {
+    _Event_Function={},
+    _DelayEvent_Function={},
+    _DelayEvent_Trigger={}
+}
 function __G__GEventTable.reg_event(event_id, func, reg_param)
     if __G__GEventTable._Event_Function[event_id] == nil then
         __G__GEventTable._Event_Function[event_id] = {}
@@ -83,9 +62,38 @@ local function call_per_sec_delay_event()
     __G__GEventTable._DelayEvent_Trigger = {}
 end
 
-function __G__GEventTable.init()
+
+local function set_all_event()
+    local cur_event_allot_id = 0
+
+    --为什么这里用负数，因为玩家身上存储了正数的索引，当玩家的数据改变后，也会触发事件
+    local function allot_event_id()
+        cur_event_allot_id = cur_event_allot_id - 1
+        return cur_event_allot_id
+    end
+
+    local function make_event()
+        return allot_event_id()
+    end
+
+    __G__GEventTable.AfterLoadAllScripts=make_event()
+    __G__GEventTable.AfterCallPerSecond = make_event()
+    __G__GEventTable.AfterCallPerMinute = make_event()
+    __G__GEventTable.AfterCallPerHour = make_event()
+    __G__GEventTable.AfterCallPerDay = make_event()
+end
+
+
+local function init()
+    set_all_event()
     --注册每秒的事件
     __G__GEventTable.reg_event(__G__GEventTable.AfterCallPerSecond, call_per_sec_delay_event)
+end
+
+
+if __G__GEventTable.is_init == nil then
+    __G__GEventTable.is_init = true
+    init()
 end
 
 return __G__GEventTable

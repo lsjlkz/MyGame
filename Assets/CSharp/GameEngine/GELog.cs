@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace CSharp
 {
@@ -14,11 +15,13 @@ namespace CSharp
         public void Log(string value)
         {
             // TODO
-            Console.WriteLine(value);
+            Debug.Log(value);
+            // Console.WriteLine(value);
         }
         public void Log(object value)
         {
-            Console.WriteLine(value);
+            // Console.WriteLine(value);
+            Debug.Log(value);
         }
 
         public void Log(string format, object args0)

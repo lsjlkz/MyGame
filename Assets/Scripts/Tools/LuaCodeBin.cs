@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using CSharp;
 using UnityEditor;
 using UnityEngine;
 
@@ -12,15 +13,11 @@ namespace Tools
            return Application.dataPath + "/LuaCode";
         }
 
-        public static string GetLuaCodeBinPath()
-        {
-            return Application.dataPath + "/Resources/LuaCodeBin";
-        }
-
+        
         [MenuItem("Lua/ExportLuaCodeBin")]
-        private static void BuildLuaCodeBin()
+        public static void BuildLuaCodeBin()
         {
-            string binPath = GetLuaCodeBinPath();
+            string binPath = PathHelp.GetLuaCodePath();
             if (Directory.Exists(binPath))
             {
                 Directory.Delete(binPath, true);
@@ -44,11 +41,11 @@ namespace Tools
             foreach(string file in files)
             {
                 string fileName = Path.GetFileName(file);
-                if (fileName.EndsWith(".meta"))
+                if (!fileName.EndsWith(".lua"))
                 {
                     continue;
                 }
-                WriteLuaCodeFile($"{dirPath}/{fileName}", $"{targetDirPath}/{fileName}.bin");
+                WriteLuaCodeFile($"{dirPath}/{fileName}", $"{targetDirPath}/{fileName}{PathHelp.BinEnd}");
             }
 
             foreach (string dir in dirs)
@@ -68,6 +65,11 @@ namespace Tools
                 {
                     // 不要注释
                     if (line.Trim().StartsWith("--"))
+                    {
+                        continue;
+                    }
+
+                    if (line.Trim().Equals(""))
                     {
                         continue;
                     }

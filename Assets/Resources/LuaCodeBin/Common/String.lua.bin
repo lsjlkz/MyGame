@@ -1,15 +1,10 @@
-
-
 local p = require("Common/Print")
-
 __G__StringTable = __G__StringTable or {}
-
 __G__StringTable.CanSerialzeType = {
     number = "number",
     boolean = "boolean",
     string = "string",
     table = "table"}
-
 function __G__StringTable.Serialize(obj)
     local lua = ""
     local t = type(obj)
@@ -45,7 +40,6 @@ function __G__StringTable.Serialize(obj)
     end
     return lua
 end
-
 function __G__StringTable.unSerialize(lua)
     local t = type(lua)
     if t == "nil" or lua == "" then
@@ -60,6 +54,4 @@ function __G__StringTable.unSerialize(lua)
     end
     return func()
 end
-
-
 return __G__StringTable

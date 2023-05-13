@@ -52,7 +52,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Examples\Editor\BuildAssetBundles.cs" />
      <Compile Include="Assets\XLua\Examples\08_Hotfix\Editor\HotfixTestCfg.cs" />
      <Compile Include="Assets\Scripts\Editor\EditorToolSet.cs" />
      <Compile Include="Assets\Scripts\Editor\StageCameraEditor.cs" />

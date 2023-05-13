@@ -4,17 +4,32 @@
 --- DateTime: 2023/5/5 15:55
 ---
 
-GEUI = CS.CSharp.GEUI
+local GEUI = CS.CSharp.GEUI
+local uiMgr = require("UI/UIMgr")
+require("UI/UIBase/UIDelegate")
 
 __UIBaseTable__ = __UIBaseTable__ or {}
 
 
-function __UIBaseTable__:show()
-    if(self.isShow == true) then
+function __UIBaseTable__:create()
+    if uiMgr.load_package(self.pkgName) == nil then
+        print("load " .. self.pkgName .. " error")
         return
     end
-    self.mainComponent = GEUI.instance():ShowUIPanel(self.panelName, self.pkgName, self.comName)
-    self.isShow = true
+    if self.mainComponent ~= nil then
+        return
+    end
+    self.mainComponent = GEUI.CreateUIPanel(self.panelName, self.pkgName, self.comName)
+end
+
+function __UIBaseTable__:show()
+    if self.isShow == true then
+        return
+    end
+    if self.mainComponent == nil then
+        return
+    end
+    self.isShow = GEUI.ShowUIPanel(self.panelName)
 end
 
 function __UIBaseTable__:hide()
@@ -47,17 +62,17 @@ function __UIBaseTable__:get_child(...)
     return child
 end
 
-
 function __UIBaseTable__:new(panelName, pkgName, comName)
-    local o = {
+    local panel = {
         panelName = panelName,
         pkgName = pkgName,
         comName = comName,
         isShow = false,
         mainComponent = nil
     }
-    setmetatable(o, {__index = self})
-    return o
+    setmetatable(panel, {__index = self})
+    uiMgr.reg_panel(panelName, panel)
+    return panel
 end
 
 return __UIBaseTable__

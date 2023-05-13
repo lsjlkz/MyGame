@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="90,90" pivot="0.5,0.5" extention="Button" initName="btn_normal">
+  <controller name="button" pages="0,up,1,down" selected="0">
+    <action type="play_transition" fromPage="" toPage="0" transition="out"/>
+    <action type="play_transition" fromPage="" toPage="1" transition="in"/>
+  </controller>
+  <displayList>
+    <loader id="n3_qkv6" name="icon" xy="0,0" size="90,90" url="ui://5pk1bwzcqkv60">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <Button/>
+  <transition name="in">
+    <item time="0" type="Scale" tween="true" startValue="1,1" endValue="0.8,0.8" duration="6" ease="Bounce.Out"/>
+    <item time="6" type="Scale" value="0.8,0.8"/>
+  </transition>
+  <transition name="out">
+    <item time="0" type="Scale" tween="true" startValue="0.8,0.8" endValue="1,1" duration="6" ease="Bounce.Out"/>
+  </transition>
+</component>

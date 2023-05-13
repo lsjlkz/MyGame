@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="5gx17xes">
+  <resources>
+    <component id="qkv61" name="btn_normal.xml" path="/btn/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

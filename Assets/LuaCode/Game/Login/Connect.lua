@@ -14,11 +14,17 @@ __G__ConnectTable = __G__ConnectTable or {}
 
 function __G__ConnectTable.Connect()
 --    TODO 需要读文件的host和port
+    print("Connect")
     geconnect.Connect("127.0.0.1", 10086)
 end
 
-function __G__ConnectTable.init()
+local function init()
     gevent.reg_event(gevent.AfterLoadAllScripts, __G__ConnectTable.Connect)
+end
+
+if __G__ConnectTable.is_init ~= true then
+    __G__ConnectTable.is_init = true
+    init()
 end
 
 return __G__ConnectTable

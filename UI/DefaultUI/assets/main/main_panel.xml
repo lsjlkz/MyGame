@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750">
+  <displayList>
+    <component id="n1_qkv6" name="btn_1" src="qkv61" fileName="btn/btn_normal.xml" pkg="5gx17xes" xy="916,561">
+      <Button icon="ui://5pk1bwzcqkv60"/>
+    </component>
+    <component id="n2_qkv6" name="btn_2" src="qkv61" fileName="btn/btn_normal.xml" pkg="5gx17xes" xy="1079,555">
+      <Button icon="ui://5pk1bwzcqkv61"/>
+    </component>
+    <graph id="n4_qkv6" name="n4" xy="160,534" size="376,157" type="rect"/>
+    <text id="n3_qkv6" name="input" xy="179,567" size="335,107" fontSize="12" autoSize="none" text="" input="true"/>
+    <text id="n5_qkv6" name="txt_input" xy="180,542" size="76,19" fontSize="12" text="@请输入文字"/>
+    <text id="n6_qkv6" name="title" xy="453,62" size="356,66" fontSize="12" autoSize="none" text="标题"/>
+  </displayList>
+</component>
