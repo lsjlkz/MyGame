@@ -27,6 +27,7 @@ end
 function script_example:load_prefab_callback(gameObject)
     print("script_example:load_prefab_callbac")
     print(self)
+    print(self.this)
     print(gameObject)
 end
 
