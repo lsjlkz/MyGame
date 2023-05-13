@@ -1,11 +1,13 @@
 local script_example = {}
 function script_example:Awake()
 end
-function script_example.Start()
+function script_example:Start()
     math.randomseed(os.time())
     CS.CSharp.LuaHelp.LoadPrefabAsync("unitychan_dynamic", self, self.load_prefab_callback)
 end
 function script_example:load_prefab_callback(gameObject)
+    print("script_example:load_prefab_callbac")
+    print(self)
     print(gameObject)
 end
 function script_example:Update()

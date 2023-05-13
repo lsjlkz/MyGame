@@ -72,7 +72,7 @@ namespace CSharp
         
         private byte[] CustomMyLoader(ref string fileName)
         {
-            string luaPath = PathHelp.GetLuaCodePath() + "\\" + fileName + PathHelp.LuaCodeBinEnd;
+            string luaPath = PathHelp.GetLuaCodePath() + "/" + fileName + PathHelp.LuaCodeBinEnd;
             string strLuaContent = File.ReadAllText(luaPath);
             byte[] result = System.Text.Encoding.UTF8.GetBytes(strLuaContent);
             return result;

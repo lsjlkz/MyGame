@@ -10,13 +10,13 @@ namespace CSharp
 
         public static void LoadPackageAllScript(string package)
         {
-            string path = PathHelp.GetLuaCodePath() + "\\" + package;
+            string path = PathHelp.GetLuaCodePath() + "/" + package;
             DoPathAllScript(path);
         }
 
         public static string GetLuaScriptPath(string path)
         {
-            return PathHelp.GetLuaCodePath() + "\\" + path;
+            return PathHelp.GetLuaCodePath() + "/" + path;
         }
 
         public static void DoPathAllScript(string path)

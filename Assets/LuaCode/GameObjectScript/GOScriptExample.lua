@@ -9,7 +9,7 @@ local script_example = {}
 function script_example:Awake()
 end
 
-function script_example.Start()
+function script_example:Start()
     
     
     math.randomseed(os.time())
@@ -25,7 +25,8 @@ function script_example.Start()
 end
 
 function script_example:load_prefab_callback(gameObject)
-    --print(self)
+    print("script_example:load_prefab_callbac")
+    print(self)
     print(gameObject)
 end
 

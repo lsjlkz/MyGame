@@ -8,8 +8,8 @@ namespace CSharp
         public static string BinEnd = ".bin";
         public static string ResourcesPath = "Resources";
         public static string LuaCodeBinEnd = ".lua" + BinEnd;
-        public static string LuaCodeRelation = $"\\{ResourcesPath}\\LuaCodeBin";
-        public static string PrefabsPath = $"\\{ResourcesPath}\\Prefabs";
+        public static string LuaCodeRelation = $"/{ResourcesPath}/LuaCodeBin";
+        public static string PrefabsPath = $"/{ResourcesPath}/Prefabs";
 
         public static string GetLuaCodePath()
         {
