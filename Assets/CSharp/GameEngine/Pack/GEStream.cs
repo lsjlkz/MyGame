@@ -24,6 +24,12 @@ namespace CSharp
             this.WriteBytes(new[] {b}, 1);
             return GEStreamPosRefProxy<byte>.NewRefProxy(buf1, null, pos);
         }
+
+        public GEStreamPosRefProxy<UInt16> WriteUI16Ref(UInt16 ui16)
+        {
+            
+        }
+        
         
         // Write其他的几个
         
