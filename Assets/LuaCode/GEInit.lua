@@ -21,8 +21,6 @@ function __GEInitTable__.load_all_script()
     CS.CSharp.LuaHelp.LoadPackageAllScript("Game")
     CS.CSharp.LuaHelp.LoadPackageAllScript("UI")
 
-    local module = require("Common/Module")
-    module.load_all_script()
 end
 
 
