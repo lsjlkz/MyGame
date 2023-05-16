@@ -19,33 +19,33 @@ end
 
 function __UIBaseTable__:bind_click_delegate(lua_function, ...)
     local component = self:get_component(...)
-    return self:bind_event_delegate(lua_function, component, 'onClick', 0, "")
+    return self:bind_event_delegate(lua_function, component, 'onClick', 0, 0)
 end
 
 function __UIBaseTable__:bind_touch_move_delegate(lua_function, ...)
     local component = self:get_component(...)
-    return self:bind_event_delegate(lua_function, component, 'onTouchMove', 0, "")
+    return self:bind_event_delegate(lua_function, component, 'onTouchMove', 0, 0)
 end
 
 function __UIBaseTable__:bind_drag_move_delegate(lua_function, ...)
     local component = self:get_component(...)
-    return self:bind_event_delegate(lua_function, component, 'onDragMove', 0, "")
+    return self:bind_event_delegate(lua_function, component, 'onDragMove', 0, 0)
 end
 
 function __UIBaseTable__:bind_scroll_delegate(lua_function, ...)
     local component = self:get_component(...)
     scroll_pane = component.scrollPane
-    return self:bind_event_delegate(lua_function, scroll_pane, 'onScroll', 0, "")
+    return self:bind_event_delegate(lua_function, scroll_pane, 'onScroll', 0, 0)
 end
 
 function __UIBaseTable__:bind_onchange_delegate(lua_function, ...)
     local component = self:get_component(...)
-    return self:bind_event_delegate(lua_function, component, 'onChanged', 0, "")
+    return self:bind_event_delegate(lua_function, component, 'onChanged', 0, 0)
 end
 
 function __UIBaseTable__:bind_focus_out_delegate(lua_function, ...)
     local component = self:get_component(...)
-    return self:bind_event_delegate(lua_function, component, 'onFocusOut', 0, "")
+    return self:bind_event_delegate(lua_function, component, 'onFocusOut', 0, 0)
 end
 
 
