@@ -8,7 +8,6 @@ __GEInitTable__ = __GEInitTable__ or {}
 
 function __GEInitTable__.Init()
     __GEInitTable__.load_all_script()
-    require("GameObjectScript/GOAddScriptExample")
     
 end
 

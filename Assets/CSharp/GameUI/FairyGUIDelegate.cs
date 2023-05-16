@@ -18,8 +18,11 @@ namespace CSharp
         public long LongData1;
         public string StrData1;
 
-        public DelegateEventCallbackLuaProxy(LuaTable owner, LuaFunction callback)
+        public DelegateEventCallbackLuaProxy(LuaTable owner, LuaFunction callback, long param1, string param2)
         {
+            _owner = owner;
+            LongData1 = param1;
+            StrData1 = param2;
             _action = (context) =>
             {
                 callback.Call(owner, context);
@@ -28,6 +31,9 @@ namespace CSharp
 
         public void OnEventCallback(EventContext ctx)
         {
+            // TODO 这里Lua和CS是同步的？ 【待确认】
+            _owner.Set("param1", LongData1);
+            _owner.Set("param2", StrData1);
             _action.Invoke(ctx);
         }
     }

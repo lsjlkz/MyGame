@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="315,233" overflow="scroll" scroll="both">
+  <displayList>
+    <component id="n7_ngkg" name="joystick" src="ngkg1" fileName="item/circle.xml" xy="57,16">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </component>
+    <graph id="n8_ngkg" name="touch_joystick" xy="0,0" size="315,233" type="rect" lineSize="2" fillColor="#00ffffff"/>
+  </displayList>
+</component>

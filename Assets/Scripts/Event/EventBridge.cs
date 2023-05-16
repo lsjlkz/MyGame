@@ -172,5 +172,6 @@ namespace FairyGUI
                 _dispatching = false;
             }
         }
+
     }
 }

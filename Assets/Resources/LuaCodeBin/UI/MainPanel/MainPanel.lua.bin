@@ -5,10 +5,13 @@ function __MainPanelTable__:after_create()
     self.btn_2 = self:get_child("btn_2")
     self.input = self:get_child("input")
     self.title = self:get_child("title")
+    self.item_joystick = self:get_child("item_joystick")
+    self.joystick = self.item_joystick:GetChild("joystick")
+    self.touch_joystick = self.item_joystick:GetChild("touch_joystick")
     self:bind_click_delegate(self.click_btn_1, self.btn_1)
     self:bind_click_delegate(self.click_btn_2, "btn_2")
     self:bind_focus_out_delegate(self.input_change, self.input)
-    self:bind_onchange_delegate(self.input_change, self.input)
+    self:bind_scroll_delegate(self.touch_joystick_move, self.item_joystick)
 end
 function __MainPanelTable__:after_show()
     self.title.text = "这是测试标题"
@@ -23,6 +26,10 @@ function __MainPanelTable__:click_btn_2()
 end
 function __MainPanelTable__:input_change()
     print("__MainPanelTable__:input_change")
+end
+function __MainPanelTable__:touch_joystick_move()
+    print("__MainPanelTable__:touch_joystick_move")
+    print(self.item_joystick.scrollPane)
 end
 local function open_main_panel()
     local uiMgr = require("UI/UIMgr")

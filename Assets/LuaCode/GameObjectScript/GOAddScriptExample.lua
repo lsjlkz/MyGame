@@ -8,3 +8,4 @@ local cube = CS.UnityEngine.GameObject.Find('Cube')
 local lua_script = require("GameObjectScript/GOScriptExample")
 local script = cube:AddComponent(typeof(CS.CSharp.LuaBehaviour))
 script:SetLuaTable(lua_script)
+

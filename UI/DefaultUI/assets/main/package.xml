@@ -2,6 +2,8 @@
 <packageDescription id="5awocywx">
   <resources>
     <component id="qkv60" name="main_panel.xml" path="/" exported="true"/>
+    <component id="ngkg1" name="circle.xml" path="/item/" exported="true"/>
+    <component id="ngkg2" name="item_joystick.xml" path="/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>

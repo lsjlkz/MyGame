@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,200" extention="Button">
+  <controller name="button" pages="2,up,3,down" selected="0"/>
+  <displayList>
+    <image id="n0_ngkg" name="up" src="ngkg2" fileName="icon/joystick0.png" pkg="5pk1bwzc" xy="62,61">
+      <gearDisplay controller="button" pages="2"/>
+    </image>
+    <image id="n1_ngkg" name="down" src="ngkg3" fileName="icon/joystick1.png" pkg="5pk1bwzc" xy="11,20">
+      <gearDisplay controller="button" pages="3"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

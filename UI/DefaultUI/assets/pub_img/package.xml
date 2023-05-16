@@ -3,6 +3,8 @@
   <resources>
     <image id="qkv60" name="btn_1.png" path="/icon/" exported="true"/>
     <image id="qkv61" name="btn_2.png" path="/icon/" exported="true"/>
+    <image id="ngkg2" name="joystick0.png" path="/icon/" exported="true"/>
+    <image id="ngkg3" name="joystick1.png" path="/icon/" exported="true"/>
   </resources>
   <publish name=""/>
 </packageDescription>
