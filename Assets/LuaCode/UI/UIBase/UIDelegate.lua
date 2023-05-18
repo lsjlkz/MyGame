@@ -14,14 +14,7 @@ function __UIBaseTable__:get_component(...)
     if type(component) == "userdata" then
         return component
     end
-    component = self.mainComponent
-    for i, v in ipairs({...}) do
-        component = component:GetChild(v)
-        if(component == nil) then
-            -- 找不到
-            return nil
-        end
-    end
+    component = self:get_child(...)
     return component
 end
 
