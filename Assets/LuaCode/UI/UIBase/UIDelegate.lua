@@ -22,9 +22,19 @@ function __UIBaseTable__:bind_click_delegate(lua_function, ...)
     return self:bind_event_delegate(lua_function, component, 'onClick', 0, 0)
 end
 
+function __UIBaseTable__:bind_touch_begin_delegate(lua_function, ...)
+    local component = self:get_component(...)
+    return self:bind_event_delegate(lua_function, component, 'onTouchBegin', 0, 0)
+end
+
 function __UIBaseTable__:bind_touch_move_delegate(lua_function, ...)
     local component = self:get_component(...)
     return self:bind_event_delegate(lua_function, component, 'onTouchMove', 0, 0)
+end
+
+function __UIBaseTable__:bind_touch_end_delegate(lua_function, ...)
+    local component = self:get_component(...)
+    return self:bind_event_delegate(lua_function, component, 'onTouchEnd', 0, 0)
 end
 
 function __UIBaseTable__:bind_drag_move_delegate(lua_function, ...)

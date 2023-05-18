@@ -9,8 +9,8 @@ function __GEInitTable__.load_all_script()
     CS.CSharp.LuaHelp.LoadPackageAllScript("Common")
     CS.CSharp.LuaHelp.LoadPackageAllScript("Game")
     CS.CSharp.LuaHelp.LoadPackageAllScript("UI")
-    local module = require("Common/Module")
-    module.load_all_script()
+    local gevent = require("Game/GEvent")
+    gevent.trigger_event(gevent.AfterLoadAllScripts)
 end
 if __GEInitTable__.is_init ~= true then
     __GEInitTable__.is_init = true

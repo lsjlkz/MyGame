@@ -20,7 +20,9 @@ function __GEInitTable__.load_all_script()
     CS.CSharp.LuaHelp.LoadPackageAllScript("Common")
     CS.CSharp.LuaHelp.LoadPackageAllScript("Game")
     CS.CSharp.LuaHelp.LoadPackageAllScript("UI")
-
+    
+    local gevent = require("Game/GEvent")
+    gevent.trigger_event(gevent.AfterLoadAllScripts)
 end
 
 

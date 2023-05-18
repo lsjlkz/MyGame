@@ -42,6 +42,7 @@ namespace CSharp
         {
             if (this.CanReadSize() < 1)
             {
+                GELog.Instance().Log("error read ui8 too short");
                 return 0;
             }
             byte b = this.buf[this.readSize];
@@ -53,6 +54,7 @@ namespace CSharp
         {
             if (this.CanReadSize() < 1)
             {
+                GELog.Instance().Log("error read i8 too short");
                 return 0;
             }
             byte b = this.buf[this.readSize];
@@ -64,6 +66,7 @@ namespace CSharp
         {
             if (this.CanReadSize() < sizeof(UInt16))
             {
+                GELog.Instance().Log("error read ui16 too short");
                 return 0;
             }
             UInt16 ui16 = BitConverter.ToUInt16(this.buf, this.readSize);
@@ -75,6 +78,7 @@ namespace CSharp
         {
             if (this.CanReadSize() < sizeof(Int16))
             {
+                GELog.Instance().Log("error read i16 too short");
                 return 0;
             }
             Int16 i16 = BitConverter.ToInt16(this.buf, this.readSize);
@@ -86,6 +90,7 @@ namespace CSharp
         {
             if (this.CanReadSize() < sizeof(UInt32))
             {
+                GELog.Instance().Log("error read ui32 too short");
                 return 0;
             }
             UInt32 ui32 = BitConverter.ToUInt32(this.buf, this.readSize);
@@ -97,6 +102,7 @@ namespace CSharp
         {
             if (this.CanReadSize() < sizeof(Int32))
             {
+                GELog.Instance().Log("error read i32 too short");
                 return 0;
             }
             Int32 i32 = BitConverter.ToInt32(this.buf, this.readSize);

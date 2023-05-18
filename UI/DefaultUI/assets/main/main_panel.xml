@@ -11,6 +11,6 @@
     <text id="n3_qkv6" name="input" xy="430,312" size="335,107" fontSize="12" autoSize="none" text="" input="true"/>
     <text id="n5_qkv6" name="txt_input" xy="433,286" size="76,19" fontSize="12" text="@请输入文字"/>
     <text id="n6_qkv6" name="title" xy="453,62" size="356,66" fontSize="12" autoSize="none" text="标题"/>
-    <component id="n7_ngkg" name="item_joystick" src="ngkg2" fileName="item_joystick.xml" xy="58,486"/>
+    <component id="n7_ngkg" name="item_joystick" src="ngkg2" fileName="item_joystick.xml" xy="215,595"/>
   </displayList>
 </component>

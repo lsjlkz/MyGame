@@ -19,7 +19,8 @@ function __MainPanelTable__:after_create()
     self:bind_click_delegate(self.click_btn_1, self.btn_1)
     self:bind_click_delegate(self.click_btn_2, "btn_2")
     self:bind_focus_out_delegate(self.input_change, self.input)
-    self:bind_scroll_delegate(self.touch_joystick_move, self.item_joystick)
+    self:bind_touch_begin_delegate(self.touch_joystick_begin, self.item_joystick)
+    self:bind_touch_move_delegate(self.touch_joystick_move, self.item_joystick)
 end
 
 function __MainPanelTable__:after_show()
@@ -40,9 +41,23 @@ function __MainPanelTable__:input_change()
     print("__MainPanelTable__:input_change")
 end
 
-function __MainPanelTable__:touch_joystick_move()
-    print("__MainPanelTable__:touch_joystick_move")
-    print(self.item_joystick.scrollPane)
+function __MainPanelTable__:touch_joystick_begin(c)
+    local root = CS.CSharp.GEUI.Groot()
+    self.start_pos = root:GlobalToLocal(c.inputEvent.position)
+end
+
+function __MainPanelTable__:touch_joystick_move(c)
+    -- TODO 这个摇杆可能要作为单独的monobehaviour，方便update
+    local root = CS.CSharp.GEUI.Groot()
+    local now_pos = root:GlobalToLocal(c.inputEvent.position)
+    local dif = now_pos - self.start_pos
+    local cube = CS.UnityEngine.GameObject.Find("Cube")
+    if cube ~= nil then
+        local cp = cube.transform.position
+        cp.x = cp.x + (dif.x / 5000)
+        cp.y = cp.y - (dif.y / 5000)
+        cube.transform.position = cp
+    end
 end
 
 local function open_main_panel()

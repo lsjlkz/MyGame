@@ -39,8 +39,8 @@ namespace CSharp
         public void SetLuaTable(LuaTable _owner)
         {
             owner = _owner;
-            // _owner.Set("__index", _owner);
-            // _owner.SetMetaTable(_owner);
+            _owner.Set("__index", GELua.Instance().GetLuaMainThread());
+            _owner.SetMetaTable(_owner);
             
             _owner.Set("this", this);
             

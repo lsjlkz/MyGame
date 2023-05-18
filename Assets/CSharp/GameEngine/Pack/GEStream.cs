@@ -22,12 +22,39 @@ namespace CSharp
             byte[] buf1 = this._curWriteBuf;
             int pos = this._curWriteBufFence;
             this.WriteBytes(new[] {b}, 1);
-            return GEStreamPosRefProxy<byte>.NewRefProxy(buf1, null, pos);
+            return GEStreamPosRefProxy<byte>.NewRefProxy(buf1, pos);
         }
 
         public GEStreamPosRefProxy<UInt16> WriteUI16Ref(UInt16 ui16)
         {
-            
+            if (this.CanWriteSize < 2)
+            {
+                // 需要填充0值
+                this.TailFillZero();
+                this.NewBuf();
+            }
+            byte[] buf1 = this._curWriteBuf;
+            this.WriteBytes(BitConverter.GetBytes(ui16), 2);
+            return GEStreamPosRefProxy<UInt16>.NewRefProxy(buf1, 0);
+        }
+
+        public GEStreamPosRefProxy<Int16> WriteUI16Ref(Int16 i16)
+        {
+            if (this.CanWriteSize < 2)
+            {
+                // 需要填充0值
+                this.TailFillZero();
+                this.NewBuf();
+            }
+            byte[] buf1 = this._curWriteBuf;
+            this.WriteBytes(BitConverter.GetBytes(i16), 2);
+            return GEStreamPosRefProxy<Int16>.NewRefProxy(buf1, 0);
+        }
+
+        public void TailFillZero()
+        {
+            // 尾部填充0
+            this.WriteBytes(new byte[4] {0, 0, 0, 0}, this.CanWriteSize);
         }
         
         
@@ -91,67 +118,72 @@ namespace CSharp
         {
             typeof(UInt16), typeof(Int16), typeof(UInt32), typeof(Int32),typeof(Byte)
         };
-        // 这个value修改可以会横跨两个byte[]
-        // 比如byte[4]的前2个在buf1，后2个在buf2
-        public byte[] _buf1; //对应的stream
-        public byte[] _buf2;
-        
+        public byte[] _buf; //对应的stream
         public int _pos;
 
-        public static GEStreamPosRefProxy<T> NewRefProxy(byte[] buf1, byte[] buf2, int pos)
+        public static GEStreamPosRefProxy<T> NewRefProxy(byte[] buf1, int pos)
         {
             if (!LimitType.Contains(typeof(T)))
             {
                 GELog.Instance().Log($"error NewRefProxy error type{typeof(T).FullName}");
                 return null;
             }
-            return new GEStreamPosRefProxy<T>(buf1, buf2, pos);
+            return new GEStreamPosRefProxy<T>(buf1, pos);
         }
 
-        private GEStreamPosRefProxy(byte[] buf1, byte[] buf2, int pos)
+        private GEStreamPosRefProxy(byte[] buf, int pos)
         {
-            _buf1 = buf1;
-            _buf2 = buf2;
+            _buf = buf;
             _pos = pos;
+        }
+
+        public bool WriteValue(byte b)
+        {
+            if (typeof(T) != typeof(byte))
+            {
+                return false;
+            }
+            _buf[_pos] = b;
+            return true;
         }
 
         public bool WriteValue(UInt16 ui16)
         {
-            if (typeof(T) != ui16.GetType())
+            if (typeof(T) != typeof(UInt16))
             {
                 return false;
             }
-            Array.Copy(BitConverter.GetBytes(ui16), 0, _buf1, _pos, sizeof(UInt16));
+            Array.Copy(BitConverter.GetBytes(ui16), 0, _buf, _pos, sizeof(UInt16));
             return true;
         }
         
         public bool WriteValue(Int16 i16)
         {
-            if (typeof(T) != i16.GetType())
+            if (typeof(T) != typeof(Int16))
             {
                 return false;
             }
-            Array.Copy(BitConverter.GetBytes(i16), 0, _buf1, _pos, sizeof(Int16));
+            Array.Copy(BitConverter.GetBytes(i16), 0, _buf, _pos, sizeof(Int16));
             return true;
         }
         
         public bool WriteValue(UInt32 ui32)
         {
-            if (typeof(T) != ui32.GetType())
+            if (typeof(T) != typeof(UInt32))
             {
                 return false;
             }
-            Array.Copy(BitConverter.GetBytes(ui32), 0, _buf1, _pos, sizeof(UInt32));
+            Array.Copy(BitConverter.GetBytes(ui32), 0, _buf, _pos, sizeof(UInt32));
             return true;
         }
         
         public bool WriteValue(Int32 i32)
         {
-            if (typeof(T) != i32.GetType())
+            if (typeof(T) != typeof(Int32))
             {
                 return false;
             }
-            Array.Copy(BitConverter.GetBytes(i32), 0, _buf1, _pos, sizeof(Int32));
+            Array.Copy(BitConverter.GetBytes(i32), 0, _buf, _pos, sizeof(Int32));
             return true;
         }
 
