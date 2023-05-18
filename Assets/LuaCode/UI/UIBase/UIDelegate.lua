@@ -11,8 +11,16 @@ __UIBaseTable__ = __UIBaseTable__ or {}
 
 function __UIBaseTable__:get_component(...)
     local component = select(1, ...)
-    if type(component) ~= "userdata" then
-        component = self:get_child(...)
+    if type(component) == "userdata" then
+        return component
+    end
+    component = self.mainComponent
+    for i, v in ipairs({...}) do
+        component = component:GetChild(v)
+        if(component == nil) then
+            -- 找不到
+            return nil
+        end
     end
     return component
 end
