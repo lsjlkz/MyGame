@@ -149,7 +149,7 @@ namespace CSharp
                 // 没有发送的
                 return;
             }
-
+            // TODO 4k对齐
             Socket().BeginSend(geNetBuf.Buf, geNetBuf.ReadSize, geNetBuf.CanReadSize(), SocketFlags.None, this._sendCallback,
                 Socket());
         }
