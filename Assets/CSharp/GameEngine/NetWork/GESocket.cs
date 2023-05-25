@@ -14,13 +14,18 @@ namespace CSharp
         private bool _isConnected = false;
         private bool _isConnecting = false;
 
+        private AsyncCallback _sendCallback;
+
 
         private GENetRecv _geNetRecv = null;
-        
+        private GENetSend _geNetSend = null;
 
         public GESocket()
         {
             _geNetRecv = new GENetRecv();
+            _geNetSend = new GENetSend();
+
+            _sendCallback = new AsyncCallback(this.OnAsyncSend_a);
         }
 
         public Socket Socket()
@@ -114,17 +119,72 @@ namespace CSharp
 
         public void Update()
         {
+            if (!IsConnect())
+            {
+                return;
+            }
             this.RecvMsg();
         }
 
-        public bool RecvMsg()
+        public void RecvMsg()
+        {
+            this._geNetRecv.RecvMsg();
+        }
+
+        public bool WriteMsg(byte[] bytes, int length)
         {
             if (!IsConnect())
             {
                 return false;
             }
-            return this._geNetRecv.RecvMsg();
+            return this._geNetSend.WriteBytes(bytes, length);
         }
 
+        public void SendMsg()
+        {
+            
+            GENetBuf geNetBuf = this._geNetSend.HoldOneBlock();
+            if (geNetBuf == null)
+            {
+                // 没有发送的
+                return;
+            }
+
+            Socket().BeginSend(geNetBuf.Buf, geNetBuf.ReadSize, geNetBuf.CanReadSize(), SocketFlags.None, this._sendCallback,
+                Socket());
+        }
+
+        private void OnAsyncSend_a(IAsyncResult ar)
+        {
+            
+            if (Socket() != ar.AsyncState)
+            {
+                return;
+            }
+
+            int sendSize = 0;
+            sendSize = Socket().EndSend(ar);
+            if (sendSize == 0)
+            {
+                this._geNetSend.ReleaseHold();
+                Disconnect();
+                return;
+            }
+
+            if (!this._geNetSend.SendingNetBuf.IncReadSize(sendSize))
+            {
+                this._geNetSend.ReleaseHold();
+                return;
+            }
+
+            if (this._geNetSend.FinishSending)
+            {
+                this._geNetSend.ReleaseHold();
+                return;
+            }
+
+            SendMsg();
+
+        }
     }
 }

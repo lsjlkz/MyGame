@@ -20,7 +20,7 @@ namespace CSharp
             GELua.Instance().InitLuaMainThread();
             GELog.Instance().InitGELog();
 
-            GELua.Instance().LuaTest();
+            GELua.Instance().InitLua();
             
             GEMilliTime.Instance().Start();
             

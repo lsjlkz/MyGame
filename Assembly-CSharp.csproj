@@ -30,7 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
@@ -41,30 +41,23 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\XLua\Gen\UnityEngine_KeyframeWrap.cs" />
      <Compile Include="Assets\Scripts\Utils\Html\HtmlSelect.cs" />
      <Compile Include="Assets\Scripts\UI\PopupMenu.cs" />
-     <Compile Include="Assets\XLua\Gen\System_Collections_Generic_List_1_System_Int32_Wrap.cs" />
      <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
      <Compile Include="Assets\Scripts\Core\Text\TypingEffect.cs" />
      <Compile Include="Assets\Scripts\UI\GSlider.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_MathfWrap.cs" />
      <Compile Include="Assets\Scripts\UI\GProgressBar.cs" />
      <Compile Include="Assets\Scripts\UI\UIContentScaler.cs" />
      <Compile Include="Assets\Scripts\Core\HitTest\ShapeHitTest.cs" />
      <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest.cs" />
      <Compile Include="Assets\Resources\UnityChan\Scripts\CameraController.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_BehaviourWrap.cs" />
      <Compile Include="Assets\Scripts\Utils\Html\IHtmlObject.cs" />
      <Compile Include="Assets\Scripts\UI\PackageItem.cs" />
      <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\ByFile.cs" />
      <Compile Include="Assets\CSharp\Game\InitUI.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_TransformWrap.cs" />
      <Compile Include="Assets\Scripts\Tween\TweenManager.cs" />
-     <Compile Include="Assets\XLua\Gen\Tutorial_BaseClassWrap.cs" />
      <Compile Include="Assets\Scripts\Utils\Html\IHtmlPageContext.cs" />
      <Compile Include="Assets\Scripts\Core\CaptureCamera.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_GameObjectWrap.cs" />
      <Compile Include="Assets\Scripts\Core\Mesh\CompositeMesh.cs" />
      <Compile Include="Assets\CSharp\GameEngine\Pack\GEPackMessage.cs" />
      <Compile Include="Assets\Scripts\Core\Mesh\PolygonMesh.cs" />
@@ -79,19 +72,12 @@
      <Compile Include="Assets\XLua\Examples\09_GenericMethod\Foo.cs" />
      <Compile Include="Assets\CSharp\GameEngine\GEMilliTime.cs" />
      <Compile Include="Assets\Scripts\Core\NAudioClip.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_MyStructWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_BaseTestWrap.cs" />
      <Compile Include="Assets\Scripts\Tween\EaseType.cs" />
-     <Compile Include="Assets\XLua\Gen\CSharp_BindLuaEventWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_Vector4Wrap.cs" />
      <Compile Include="Assets\XLua\Examples\11_RawObject\RawObjectTest.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_DebugWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\Tutorial_DerivedClassWrap.cs" />
      <Compile Include="Assets\Scripts\Core\GoWrapper.cs" />
      <Compile Include="Assets\CSharp\GameEngine\GELog.cs" />
      <Compile Include="Assets\CSharp\GameEngine\NetWork\GENetRecv.cs" />
      <Compile Include="Assets\Scripts\Core\Text\InputTextField.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_Vector2Wrap.cs" />
      <Compile Include="Assets\Scripts\Core\HitTest\MeshColliderHitTest.cs" />
      <Compile Include="Assets\Scripts\UI\GTree.cs" />
      <Compile Include="Assets\Scripts\UI\GLoader.cs" />
@@ -102,18 +88,14 @@
      <Compile Include="Assets\Scripts\Core\MovieClip.cs" />
      <Compile Include="Assets\Scripts\Utils\Html\HtmlElement.cs" />
      <Compile Include="Assets\XLua\Examples\12_ReImplementInLua\ReImplementInLua.cs" />
-     <Compile Include="Assets\XLua\Gen\Tutorial_DerivedClassExtensionsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_LuaBehaviourWrap.cs" />
      <Compile Include="Assets\XLua\Gen\XLuaGenAutoRegister.cs" />
      <Compile Include="Assets\CSharp\GameEngine\NetWork\GENetRecvBuf.cs" />
      <Compile Include="Assets\Scripts\Utils\Html\HtmlLink.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearDisplay2.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_ColorWrap.cs" />
      <Compile Include="Assets\XLua\Examples\06_Coroutine\Coroutine_Runner.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearFontSize.cs" />
      <Compile Include="Assets\Scripts\Core\Text\IKeyboard.cs" />
      <Compile Include="Assets\Scripts\Utils\XMLIterator.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_ParticleSystemWrap.cs" />
      <Compile Include="Assets\CSharp\GameEngine\GEUI.cs" />
      <Compile Include="Assets\XLua\Examples\08_Hotfix\StatefullTest.cs" />
      <Compile Include="Assets\Scripts\UI\GTextField.cs" />
@@ -134,22 +116,13 @@
      <Compile Include="Assets\CSharp\GameEngine\NetWork\GEMsgBase.cs" />
      <Compile Include="Assets\Scripts\Tween\EaseManager.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearLook.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_FooExtensionWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\Tutorial_CSCallLua_ItfDBridge.cs" />
      <Compile Include="Assets\Scripts\Tween\GTweener.cs" />
      <Compile Include="Assets\CSharp\GameEngine\NetWork\GEConnect.cs" />
-     <Compile Include="Assets\XLua\Gen\CSharp_GEDatetimeWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_TimeWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_Vector3Wrap.cs" />
      <Compile Include="Assets\Scripts\UI\GComponent.cs" />
      <Compile Include="Assets\Resources\UnityChan\Scripts\SpringManager.cs" />
      <Compile Include="Assets\Resources\UnityChan\Scripts\RandomWind.cs" />
-     <Compile Include="Assets\XLua\Gen\CSharp_DelegateEventCallbackLuaProxyWrap.cs" />
      <Compile Include="Assets\CSharp\GameEngine\GESingleton.cs" />
      <Compile Include="Assets\Scripts\Core\BlendMode.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_InvokeLua_ICalcBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\CSharp_LuaHelpWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_TextAssetWrap.cs" />
      <Compile Include="Assets\Scripts\Core\Container.cs" />
      <Compile Include="Assets\Scripts\Utils\XML.cs" />
      <Compile Include="Assets\Scripts\UI\GObjectPool.cs" />
@@ -161,9 +134,6 @@
      <Compile Include="Assets\Scripts\UI\UIObjectFactory.cs" />
      <Compile Include="Assets\XLua\Examples\10_SignatureLoader\SignatureLoaderTest.cs" />
      <Compile Include="Assets\Scripts\Event\IEventDispatcher.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_PeddingWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\System_Collections_IEnumeratorBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\CSharp_PathHelpWrap.cs" />
      <Compile Include="Assets\Scripts\UI\UIPackage.cs" />
      <Compile Include="Assets\CSharp\GameLua\LuaHelp.cs" />
      <Compile Include="Assets\Scripts\Core\Mesh\FillMesh.cs" />
@@ -178,25 +148,17 @@
      <Compile Include="Assets\CSharp\GameUI\FairyGUIDelegate.cs" />
      <Compile Include="Assets\XLua\Gen\EnumWrap.cs" />
      <Compile Include="Assets\Scripts\Utils\ByteBuffer.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_Ray2DWrap.cs" />
      <Compile Include="Assets\Resources\UnityChan\Scripts\IdleChanger.cs" />
      <Compile Include="Assets\Scripts\Utils\XMLUtils.cs" />
      <Compile Include="Assets\XLua\Tutorial\LuaCallCSharp\LuaCallCs.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_ObjectWrap.cs" />
      <Compile Include="Assets\Resources\UnityChan\Scripts\ThirdPersonCamera.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_Foo2ChildWrap.cs" />
      <Compile Include="Assets\Resources\UnityChan\Scripts\AutoBlink.cs" />
      <Compile Include="Assets\Scripts\Filter\IFilter.cs" />
-     <Compile Include="Assets\CSharp\GameEngine\Pack\GEStream.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_IExchangerBridge.cs" />
      <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_AnimationClipWrap.cs" />
      <Compile Include="Assets\Scripts\Core\StageEngine.cs" />
-     <Compile Include="Assets\XLua\Gen\System_ObjectWrap.cs" />
      <Compile Include="Assets\XLua\Examples\07_AsyncTest\MessageBox.cs" />
      <Compile Include="Assets\Scripts\Core\HitTest\IHitTest.cs" />
      <Compile Include="Assets\Scripts\Tools\LuaCodeBin.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_RayWrap.cs" />
      <Compile Include="Assets\Scripts\UI\GTextInput.cs" />
      <Compile Include="Assets\Scripts\UI\Relations.cs" />
      <Compile Include="Assets\Scripts\Event\EventDispatcher.cs" />
@@ -214,10 +176,8 @@
      <Compile Include="Assets\Scripts\Utils\Html\HtmlImage.cs" />
      <Compile Include="Assets\Scripts\Gesture\RotationGesture.cs" />
      <Compile Include="Assets\Scripts\UI\Window.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_NoGcWrap.cs" />
      <Compile Include="Assets\Scripts\Utils\ToolSet.cs" />
      <Compile Include="Assets\Scripts\UI\GButton.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_QuaternionWrap.cs" />
      <Compile Include="Assets\Scripts\Core\Text\TextFormat.cs" />
      <Compile Include="Assets\Scripts\Core\Text\BitmapFont.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\IAnimationGear.cs" />
@@ -226,21 +186,17 @@
      <Compile Include="Assets\Scripts\UI\DragDropManager.cs" />
      <Compile Include="Assets\Scripts\Core\Stage.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearDisplay.cs" />
-     <Compile Include="Assets\XLua\Gen\CSharp_LuaBehaviourWrap.cs" />
      <Compile Include="Assets\Scripts\UI\ScrollPane.cs" />
      <Compile Include="Assets\Scripts\Utils\XMLList.cs" />
      <Compile Include="Assets\CSharp\GameEngine\GELua.cs" />
-     <Compile Include="Assets\XLua\Gen\CSharp_GESocketWrap.cs" />
      <Compile Include="Assets\Scripts\UI\UIPanel.cs" />
      <Compile Include="Assets\Scripts\Core\MaterialManager.cs" />
      <Compile Include="Assets\Scripts\Core\Text\BaseFont.cs" />
      <Compile Include="Assets\Scripts\Core\Text\RichTextField.cs" />
      <Compile Include="Assets\Scripts\Core\NGraphics.cs" />
-     <Compile Include="Assets\XLua\Gen\CSharp_GEConnectWrap.cs" />
      <Compile Include="Assets\Scripts\Utils\ZipReader.cs" />
      <Compile Include="Assets\Scripts\UI\Margin.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearColor.cs" />
-     <Compile Include="Assets\XLua\Gen\Tutorial_ICalcWrap.cs" />
      <Compile Include="Assets\Scripts\Gesture\SwipeGesture.cs" />
      <Compile Include="Assets\Scripts\Utils\UBBParser.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearIcon.cs" />
@@ -248,24 +204,19 @@
      <Compile Include="Assets\Scripts\UI\Gears\GearXY.cs" />
      <Compile Include="Assets\Scripts\Core\StageCamera.cs" />
      <Compile Include="Assets\Scripts\UI\IUISource.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_Foo2ParentWrap.cs" />
      <Compile Include="Assets\Scripts\UI\Transition.cs" />
      <Compile Include="Assets\CSharp\GameEngine\GEDatetime.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_FooWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_LightWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_ResourcesWrap.cs" />
+     <Compile Include="Assets\CSharp\GameEngine\Pack\GEPackLua.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearBase.cs" />
      <Compile Include="Assets\Scripts\Core\Shape.cs" />
      <Compile Include="Assets\CSharp\GameEngine\NetWork\GENetSRBuf.cs" />
      <Compile Include="Assets\Scripts\UI\GRoot.cs" />
      <Compile Include="Assets\Scripts\UI\GMovieClip.cs" />
      <Compile Include="Assets\CSharp\GameEngine\NetWork\GESocket.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_MonoBehaviourWrap.cs" />
      <Compile Include="Assets\Scripts\Core\Mesh\LineMesh.cs" />
      <Compile Include="Assets\Scripts\Event\InputEvent.cs" />
      <Compile Include="Assets\Extensions\Spine\SpineLoader.cs" />
      <Compile Include="Assets\CSharp\GameUI\BindLuaEvent.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_Foo1ParentWrap.cs" />
      <Compile Include="Assets\Scripts\Core\Text\RTLSupport.cs" />
      <Compile Include="Assets\XLua\Tutorial\CSharpCallLua\CSCallLua.cs" />
      <Compile Include="Assets\Scripts\Filter\ColorFilter.cs" />
@@ -278,9 +229,7 @@
      <Compile Include="Assets\Scripts\Core\Mesh\RoundedRectMesh.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\IColorGear.cs" />
      <Compile Include="Assets\XLua\Examples\07_AsyncTest\AsyncTest.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_BoundsWrap.cs" />
      <Compile Include="Assets\Scripts\Event\EventBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_SkinnedMeshRendererWrap.cs" />
      <Compile Include="Assets\Scripts\Utils\Html\HtmlPageContext.cs" />
      <Compile Include="Assets\Scripts\UI\GScrollBar.cs" />
      <Compile Include="Assets\CSharp\GameEngine\NetWork\GENetDefine.cs" />
@@ -288,15 +237,12 @@
      <Compile Include="Assets\Scripts\Core\Mesh\MeshFactory.cs" />
      <Compile Include="Assets\XLua\Examples\09_GenericMethod\GenericMethodExample.cs" />
      <Compile Include="Assets\Scripts\UI\Controller.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_WaitForSecondsWrap.cs" />
      <Compile Include="Assets\Scripts\UI\GLabel.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTest_Foo1ChildWrap.cs" />
      <Compile Include="Assets\Scripts\Tween\TweenPropType.cs" />
      <Compile Include="Assets\Scripts\Core\HitTest\PixelHitTest.cs" />
      <Compile Include="Assets\Scripts\Tween\GPath.cs" />
      <Compile Include="Assets\Scripts\UI\Gears\GearSize.cs" />
      <Compile Include="Assets\Scripts\Utils\Html\HtmlInput.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_AnimationCurveWrap.cs" />
      <Compile Include="Assets\Extensions\TextMeshPro\TMPTextFormat.cs" />
      <Compile Include="Assets\Scripts\Tween\GTween.cs" />
      <Compile Include="Assets\Scripts\Core\Mesh\EllipseMesh.cs" />
@@ -304,7 +250,6 @@
      <Compile Include="Assets\Scripts\Core\ShaderConfig.cs" />
      <Compile Include="Assets\Scripts\UI\AsyncCreationHelper.cs" />
      <Compile Include="Assets\Scripts\UI\RelationItem.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_RendererWrap.cs" />
      <Compile Include="Assets\Scripts\UI\FieldTypes.cs" />
      <Compile Include="Assets\Scripts\Utils\Html\HtmlParser.cs" />
      <Compile Include="Assets\Extensions\DragonBones\DragonBonesLoader.cs" />
@@ -313,7 +258,6 @@
      <Compile Include="Assets\Scripts\UI\GLoader3D.cs" />
      <Compile Include="Assets\CSharp\GameResource\ResourceMgr.cs" />
      <Compile Include="Assets\Scripts\UI\Action\ControllerAction.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngine_ComponentWrap.cs" />
      <Compile Include="Assets\XLua\Gen\PackUnpack.cs" />
      <Compile Include="Assets\Scripts\Core\Text\TextField.cs" />
      <Compile Include="Assets\Scripts\Core\Mesh\RegularPolygonMesh.cs" />
@@ -323,7 +267,7 @@
      <Compile Include="Assets\Resources\UnityChan\Scripts\SpringBone.cs" />
      <Compile Include="Assets\Extensions\TextMeshPro\TMPFont.cs" />
      <Compile Include="Assets\Scripts\Gesture\LongPressGesture.cs" />
-     <Compile Include="Assets\XLua\Gen\CSharp_GEUIWrap.cs" />
+     <Compile Include="Assets\CSharp\GameEngine\NetWork\GENetSend.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\Resources\UnityChan\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />

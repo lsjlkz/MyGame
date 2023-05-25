@@ -1,12 +1,18 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using XLua;
 
+using LuaAPI = XLua.LuaDLL.Lua;
+
 namespace CSharp
 {
+
     [LuaCallCSharp]
     public class LuaHelp
     {
+
 
         public static void LoadPackageAllScript(string package)
         {

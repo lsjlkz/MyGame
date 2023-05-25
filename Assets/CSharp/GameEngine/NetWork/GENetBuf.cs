@@ -9,6 +9,29 @@ namespace CSharp
         private int writeSize = 0;
         private int bufSize = 0;
 
+        public byte[] Buf
+        {
+            get => this.buf;
+        }
+
+        public int ReadSize
+        {
+            get => this.readSize;
+        }
+
+        public bool IncReadSize(int hasReadSize)
+        {
+            if (hasReadSize > this.CanReadSize())
+            {
+                GELog.Instance().Log("err inc read size");
+                this.readSize = this.writeSize;
+                return false;
+            }
+
+            this.readSize += hasReadSize;
+            return true;
+        }
+        
         public GENetBuf(int _bufSize)
         {
             this.bufSize = _bufSize;

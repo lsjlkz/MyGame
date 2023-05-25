@@ -20,6 +20,10 @@ end
 function __MainPanelTable__:click_btn_1(ctx)
     print("click_btn_1")
     print(ctx.sender)
+    local o = {}
+    o[3] = 4
+    CS.CSharp.GEPackLua.PackObj(1, o)
+    print(CS.CSharp.GEPackLua.SendPackMsg())
 end
 function __MainPanelTable__:click_btn_2()
     print("click_btn_2")

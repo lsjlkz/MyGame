@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace CSharp
 {
-    public class GENetRecv:GESingleton<GENetRecv>
+    public class GENetRecv
     {
         private GENetRecvBuf _geNetRecvBuf;
 
-        public GENetRecv() : base()
+        public GENetRecv()
         {
             _geNetRecvBuf = new GENetRecvBuf();
         }

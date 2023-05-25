@@ -1,15 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace CSharp
 {
     public class GENetSendBuf:GENetSRBuf
     {
 
-        public bool isHold;
+        private bool isHold;
 
         public GENetSendBuf():base()
         {
             isHold = false;
+        }
+
+        public void ReleaseHold()
+        {
+            this.isHold = false;
         }
 
         public bool HoldBlock()
@@ -39,15 +45,11 @@ namespace CSharp
             this.isHold = true;
             return true;
         }
-
-        public void WriteStream(GEStream geStream)
+        
+        public GENetBuf GetReadBuf()
         {
-            foreach (byte[] buf in geStream.BufQueue)
-            {
-                this.WriteByte(buf, buf.Length, 0);
-            }
-
-            this.WriteByte(geStream.CurBuf, geStream.CurBufFence, 0);
+            return this.readBuf;
         }
+
     }
 }

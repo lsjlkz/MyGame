@@ -18,6 +18,9 @@ namespace CSharp
             }
             _luaEnv = new LuaEnv();
             _luaEnv.AddLoader(CustomMyLoader);
+
+            GEPackLua.InitPackPack();
+            
             return true;
         }
 
@@ -65,7 +68,7 @@ namespace CSharp
             object[] ret = DoString(luaText);
         }
 
-        public void LuaTest()
+        public void InitLua()
         {
             Instance().DoString("require('GEInit')");
         }

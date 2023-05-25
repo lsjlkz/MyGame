@@ -24,5 +24,8 @@
         // 默认buf大小
         public static int DEFAULT_BUF_SIZE = 1024;
 
+        // LuaPack缓冲区的大小
+        public const int LUA_MAX_BUF_SIZE = 65535;
+
     }
 }
