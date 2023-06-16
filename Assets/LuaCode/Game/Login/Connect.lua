@@ -8,14 +8,14 @@
 local geconnect = CS.CSharp.GEConnect
 
 local gevent = require("Game/GEvent")
-
+local cDefine = require("Common/CDefine")
 
 __G__ConnectTable = __G__ConnectTable or {}
 
 function __G__ConnectTable.Connect()
 --    TODO 需要读文件的host和port
     print("Connect")
-    geconnect.Connect("127.0.0.1", 10086)
+    geconnect.Connect("127.0.0.1", cDefine.Port_Gateway)
 end
 
 local function init()

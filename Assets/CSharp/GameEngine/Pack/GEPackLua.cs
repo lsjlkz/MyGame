@@ -116,8 +116,9 @@ namespace CSharp
 
             UInt16 WriteSize = (UInt16)LuaPackObj.WriteSize;
             GESocket.Instance().WriteMsg(BitConverter.GetBytes(MsgType), sizeof(UInt16));
-            // 8 是头
+            // 把消息长度打包进去，其中这个 8 是消息头长度
             GESocket.Instance().WriteMsg(BitConverter.GetBytes(WriteSize + 8), sizeof(UInt16));
+            
             // TODO 4个字节的重定向
             GESocket.Instance().WriteMsg(BitConverter.GetBytes(0), 4);
             GESocket.Instance().WriteMsg(LuaPackObj.Buf, WriteSize);
